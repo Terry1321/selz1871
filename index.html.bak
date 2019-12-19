@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5">
+		<title>赛尔兹-Selz.com（中国）-赛尔兹（Selz</title>
+		<link rel="stylesheet" type="text/css" href="resource/css/base.css" />
+	</head>
+	<script>
+		var curentPage = 'Home'
+		window.addEventListener('resize', function() {
+			if (window.outerWidth < 350) {
+				document.querySelector('[name="viewport"]').content = "width=device-width, user-scalable=no, initial-scale=0.4"
+			} else {
+				document.querySelector('[name="viewport"]').content = "width=device-width, user-scalable=no, initial-scale=0.5"
+			}
+		    // 变化后需要做的事
+		})
+		window.onload = function (){ 
+			document.querySelector('.img4').onclick = function () {
+				document.querySelector('.mask').style.display = 'block'
+				document.querySelector('.searchview').style.display = 'block'
+			}
+			document.querySelector('.mask').onclick = function () {
+				document.querySelector('.mask').style.display = 'none'
+				document.querySelector('.searchview').style.display = 'none'
+			}
+			document.querySelector('.img1').onclick = function () {
+				document.querySelector('.sidebar').style.left = '0px'
+				document.querySelector('.mobilenav').style.display = 'none'
+			}
+			document.querySelector('.closebtn').onclick = function () {
+				document.querySelector('.sidebar').style.left = '-600px'
+				document.querySelector('.mobilenav').style.display = 'block'
+
+			}
+			document.querySelectorAll('.barnav a').forEach(function(obj) {
+			    obj.onclick = function() {
+					document.querySelector('.sidebar').style.left = '-600px'
+						document.querySelector('.mobilenav').style.display = 'block'
+
+					document.querySelectorAll('.barnav a').forEach(function(obj) {
+						obj.className = '';
+					})
+			        this.className += 'selected';
+			    }
+			})
+			document.querySelectorAll('.homecontent .nav a').forEach(function(obj, index) {
+				obj.onclick = function() {
+					document.querySelectorAll('.header .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.content .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.header .nav a')[index].className += 'selected'
+					document.querySelectorAll('.content .nav a')[index].className += 'selected'
+					document.querySelector('.homecontent').style.display = 'none'
+					document.querySelector('.header').style.display = 'block'
+					document.querySelector('.content').style.display = 'block'
+					document.querySelector('.footer').style.display = 'block'
+					if(index == 1 || index == 2) {
+						document.querySelector('.historyinfo').style.display = 'block'
+						document.querySelector('.concat').style.display = 'none'
+					}else {
+						document.querySelector('.historyinfo').style.display = 'none'
+						document.querySelector('.concat').style.display = 'block'
+					}
+				}
+			})
+			document.querySelectorAll('.header .nav a').forEach(function(obj, index) {
+				obj.onclick = function() {
+					document.querySelectorAll('.header .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.content .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.header .nav a')[index].className += 'selected'
+					document.querySelectorAll('.content .nav a')[index].className += 'selected'
+					if(index == 0) {
+						document.querySelector('.homecontent').style.display = 'block'
+						document.querySelector('.header').style.display = 'none'
+						document.querySelector('.content').style.display = 'none'
+						document.querySelector('.footer').style.display = 'none'
+					}
+					if(index == 1 || index == 2) {
+						document.querySelector('.historyinfo').style.display = 'block'
+						document.querySelector('.concat').style.display = 'none'
+					}else {
+						document.querySelector('.historyinfo').style.display = 'none'
+						document.querySelector('.concat').style.display = 'block'
+					}
+				}
+			})
+			document.querySelectorAll('.content .nav a').forEach(function(obj, index) {
+				obj.onclick = function() {
+					document.querySelectorAll('.header .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.content .nav a').forEach(function(obj) {
+						obj.className = '';
+					})
+					document.querySelectorAll('.header .nav a')[index].className += 'selected'
+					document.querySelectorAll('.content .nav a')[index].className += 'selected'
+					if(index == 0) {
+						document.querySelector('.homecontent').style.display = 'block'
+						document.querySelector('.header').style.display = 'none'
+						document.querySelector('.content').style.display = 'none'
+						document.querySelector('.footer').style.display = 'none'
+					}
+					if(index == 1 || index == 2) {
+						document.querySelector('.historyinfo').style.display = 'block'
+						document.querySelector('.concat').style.display = 'none'
+					}else {
+						document.querySelector('.historyinfo').style.display = 'none'
+						document.querySelector('.concat').style.display = 'block'
+					}
+				}
+			})
+			document.querySelector('.searchview img').onclick = function () {
+				if (document.querySelector('input').value == '历史') {
+					window.location.href = window.location.pathname + "#history";
+					document.querySelector('.mask').style.display = 'none'
+					document.querySelector('.searchview').style.display = 'none'
+				}
+			}
+		} 
+	</script>
+	<style>
+		html,
+		body {
+			overflow-x: hidden;
+		}
+		.concat a {
+			color: #005CB9;
+			text-decoration: none;
+		}
+		.sidebar {
+			display: none;
+		}
+		.header, .content, .footer {
+			display: none;
+		}
+		.mask {
+			display: none;
+			z-index: 10;
+			    height: 100%;
+			    position: fixed;
+			    width: 100%;
+			    top: 0;
+			    background: rgba(0,0,0,0.8);
+		}
+		.searchview {
+				display: none;
+			    z-index: 999;
+			    position: fixed;
+			    top: 10%;
+			    left: calc(50% - 250px);
+			    width: 500px;
+			    background: #bbbbbb;
+			    border-radius: 10px;
+		}
+		.searchview img {
+			    margin-top: 16px;
+		}
+		.searchview input {
+			    outline: none;
+			        width: 430px;
+			        height: 59px;
+			        font-size: 25px;
+			        border: none;
+			        background: #bbbbbb;
+			        color: #fff;
+			        border-radius: 10px;
+		}
+		.mobilenav {
+			background: rgba(0, 0, 0, 0.5);
+			height: 100px;
+		}
+
+		.mobilenav img {
+			margin-top: 29px;
+		}
+
+		.mobilenav .img1 {
+			margin-left: 40px;
+		}
+
+		.mobilenav .img2 {
+			margin-left: 25px;
+		}
+
+		.mobilenav .img3 {
+			margin-left: 0%;
+			position: absolute;
+			left: 45%;
+			margin-top: 22px;
+		}
+
+		.mobilenav .img4 {
+			position: absolute;
+			right: 30px;
+			margin-right: 30px;
+			margin-top: 30px;
+		}
+
+		.header {
+			background: url(resource/homebg.png);
+			background-size: 100%;
+			background-position: 0px -100px;
+			height: 582px;
+		}
+
+		.nav {
+			padding: 96px 79px;
+		}
+
+		.nav2 {
+			padding: 172px 0px;
+			width: 20%;
+			padding-left: 72px;
+			/*float: left;*/
+			position: fixed;
+			top: 0;
+		}
+
+		.infoheader {
+			color: #000000;
+			margin-top: 122px;
+		}
+
+		.infoheader .title {
+			font-size: 25px;
+		}
+
+		.infoheader .middle {
+			color: #3e3a39;
+			font-size: 20px;
+			line-height: 57px;
+		}
+
+		.infoheader .middle .line {
+			margin-top: 0px;
+			display: inline-block;
+			border-bottom: 1px solid #3e3a39;
+			width: 50px;
+			margin-left: 7px;
+			vertical-align: middle;
+		}
+
+		.infoheader .middle span {
+			color: #000000;
+			font-weight: 500;
+		}
+
+		.infoheader .middle span.mark {
+			background: #3e3a39;
+			width: 5px;
+			height: 5px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+
+		.infoheader .assist {
+			font-size: 10px;
+		}
+
+		.footer {
+			color: #fff;
+			background: #B6B6B6;
+			text-align: center;
+			height: 100px;
+		}
+
+		.imgnav {
+			margin-top: 126px;
+		}
+
+		.imgnav .item {
+			float: left;
+			text-align: left;
+			margin-left: 25px;
+			margin-top: 22px;
+		}
+
+		.imgnav .item:first-child {
+			margin-left: 0px !important;
+		}
+
+		.imgnav .item .itemcontent {
+			min-height: 450px;
+		}
+
+		.imgnav .item span {
+			font-size: 15px;
+			width: 320px;
+			line-height: 30px;
+			display: block;
+			color: #666666;
+			margin-top: 16px;
+		}
+
+		.imgnav .item p {
+			font-weight: 500;
+			color: #333333;
+			line-height: 30px;
+			margin-top: 21px;
+		}
+
+		.info {
+			/*float: left;*/
+			width: 74%;
+			position: relative;
+			left:calc(20% + 72px);
+		}
+
+		.footer {
+			float: left;
+			width: 100%;
+			margin-top: 196px;
+			font-size: 12.5px;
+		}
+
+		.footer p {
+			margin-top: 10px
+		}
+
+		.footer p:first-child {
+			margin-top: 19px;
+		}
+
+		.contactinfo {
+			width: 100%;
+			display: inline-block;
+			color: #666666;
+			line-height: 27px;
+			margin-left: calc(20% + 72px);
+			margin-top: 138px;
+			font-size: 15px;
+		}
+
+		.contactinfo .title {
+			font-weight: 800;
+		}
+
+		.mobilefooter {
+			display: none;
+		}
+		.mobilenav {
+			display: none;
+		}
+		
+		.historyinfo .infoheader {
+			color: #000000;
+			margin-top: 122px;
+		}
+		
+		.historyinfo .infoheader .title {
+			font-size: 25px;
+		}
+		
+		.historyinfo .infoheader .middle {
+			color: #3e3a39;
+			font-size: 20px;
+			line-height: 57px;
+		}
+		
+		.historyinfo .infoheader .middle .line {
+			margin-top: 3px;
+			display: inline-block;
+			border-bottom: 2px solid #3e3a39;
+			width: 50px;
+			margin-left: 7px;
+			vertical-align: middle;
+		}
+		
+		.historyinfo .infoheader .middle span {
+			color: #000000;
+			font-weight: 500;
+		}
+		
+		.historyinfo .infoheader .middle span.mark {
+			background: #3e3a39;
+			width: 5px;
+			height: 5px;
+			display: inline-block;
+		}
+		
+		.historyinfo .infoheader .assist {
+			font-size: 10px;
+		}
+		
+		.historyinfo .imgnav {
+			margin-top: 126px;
+		}
+		
+		.historyinfo .imgnav .item:first-child {
+			margin-left: 0px!important;		
+		}
+		
+		.historyinfo .imgnav .item {
+			display: inline-block;
+			text-align: center;
+			margin-left: 0px;
+			margin-top: 22px;
+		}
+		
+		.historyinfo .imgnav .item span {
+			display: block;
+			color: #000;
+			margin-top: 16px;
+		}
+		
+		.historyinfo {
+			display: none;
+			/*float: left;*/
+			width: 74%;
+			position: relative;
+			left: calc(20% + 72px);
+		}
+		
+		.historyinfo .infohtml {
+			margin-top: 57px;
+			color: #666666;
+			line-height: 35px;
+		}
+		
+		.historyinfo .infohtml li {
+			list-style: disc;
+			color: #666666;
+		}
+	</style>
+	<style>
+		.homecontent {
+			background: url('resource/homebg.png');
+			background-size: 100% 100%;
+			height: 100vh;
+		}
+		.homecontent .rightbottom {
+			width: 182px;
+			position: absolute;
+			right: 33px;
+			bottom: 35px;
+		}
+		.homeinfo {
+			position: absolute;
+			right: 10px;
+			color: #7B8A97;
+			top: 36px;
+		}
+		.homeinfo .item {
+			display: inline-block;
+			font-size: 12px;
+			margin-left: 19px;
+		}
+		.homeinfo .item img.address {
+			width: 9px;
+		}
+		.homeinfo .item img.phone {
+			width: 7px;
+		}
+		.homeinfo .item img.email {
+			width: 17px;
+		}
+		.homeinfo .item span{
+			vertical-align: text-top;
+			margin-left: 9px;
+		}
+	</style>
+	<style>
+		@media screen and (max-width: 1000px) {
+
+			.historyinfo .infoheader .title {
+			    font-size: 15px;
+			}
+			.historyinfo .infoheader .middle .line {
+			    margin-top: 3px;
+			    display: inline-block;
+			    border-bottom: 1px solid #3e3a39;
+			    width: 55%;
+			    margin-left: 7px;
+			    vertical-align: middle;
+			}
+			.header, .content, .footer {
+				display: block!important;
+			}
+			.historyinfo .infoheader .assist {
+				width: 110%;
+			    font-size: 10px;
+			}
+			.historyinfo .infoheader .middle {
+			    color: #3e3a39;
+			    font-size: 12px;
+			    line-height: 57px;
+			}
+			.mobilenav {
+				display: block;
+				z-index: 9;
+				position: fixed;
+				top: 0px;
+				width: 100%;
+			}
+		
+			.header {
+				background: url(resource/image/banner.png);
+				background-size: 100%;
+				background-position: 0px -100px;
+				height: 155vw;
+			}
+		
+			.nav {
+				display: none;
+			}
+		
+			.info {
+				padding: 0px 0px 0px 55px;
+				width: 100%;
+			}
+		
+			.infoheader .middle .line {
+				margin-top: 2px;
+				display: inline-block;
+				border-bottom: 1px solid #3e3a39;
+				width: 60%;
+				margin-left: 7px;
+				vertical-align: middle;
+			}
+		
+			.info .item img {
+				width: 206px;
+				height: 129px;
+			}
+		
+			.info .imgnav .item span {
+				font-size: 15px;
+				width: 205px;
+				line-height: 30px;
+				display: block;
+				color: #666666;
+				margin-top: 16px;
+			}
+		
+			.contactinfo {
+				width: 80%;
+				padding: 0 55px;
+				font-size: 11px;
+				margin-left: 0px;
+			}
+		
+			.mobilefooter {
+				display: block;
+				float: left;
+				width: 100%;
+				margin-top: 196px;
+				font-size: 12.5px;
+				color: #fff;
+				background: #999999;
+				height: 108px;
+			}
+		
+			.mobilefooter .logo {
+				    padding-left: 26px;
+				    padding-top: 33px;
+				    margin-right: 26px;
+			}
+		
+			.mobilefooter .footerinfo {
+				    width: 82%;
+				    font-size: 12px;
+				    display: inline-block;
+			}
+		
+			.addressinfo {
+				margin-bottom: 15px;
+			}
+		
+			.addressinfo .item {
+				display: inline-block;
+				font-size: 12px;
+				margin-left: 19px;
+			}
+		
+			.addressinfo img {
+				height: 15px;
+			}
+		
+			.addressinfo .item img.address {
+				width: 9px;
+			}
+		
+			.addressinfo .item img.phone {
+				width: 7px;
+			}
+		
+			.addressinfo .item img.email {
+				width: 17px;
+			}
+		
+			.addressinfo .item span {
+				vertical-align: text-top;
+				margin-left: 9px;
+			}
+			
+			.concatinfo span {
+			    margin-left: 10px;
+			}
+			.concatinfo img {
+				margin-left: 15px;
+			}
+			.footer {
+				display: none!important;
+			}
+			.sidebar {
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				width: 42%;
+				height: auto;
+				background: rgba(0, 0, 0, 0.5);
+				left: -600px;
+				position: fixed;
+				z-index: 99;
+			}
+			.sidebar .closebtn {
+				background: rgba(0, 0, 0, 0.5);
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				right: -60px;
+				top: 0;
+			}
+			.closebtn img {
+				padding: 13px;
+			}
+			.sidebar .barlogo {
+				padding: 70px;
+			}
+			.barnav {
+				color: #FFFFFF;
+				font-size: 30px;
+				font-weight: 900;
+			}
+			.barnav li {
+				margin-bottom: 80px;
+			}
+			.barnav a {
+				color: #fff;
+				text-decoration: none;
+				padding: 70px;
+			}
+			.barnav a.selected {
+				color: #005B9F;
+			}
+			.historyinfo .infohtml{
+				font-size: 11px;
+				padding-right: 100px;
+				line-height: 55px;
+			}
+			.historyinfo {
+				display: block!important;
+				padding: 0px 0px 0px 55px;
+				width: 95%;
+			}
+			.historyinfo .item img {
+			    width: 142px;
+			    height: 169px;
+			}
+			.historyinfo .imgnav .item span {
+			    font-size: 15px;
+			    width: 165px;
+			    line-height: 30px;
+			    display: block;
+			    color: #666666;
+			    margin-top: 16px;
+			}
+			.infoheader .middle .line {
+			    margin-top: 2px;
+			    display: inline-block;
+			    border-bottom: 1px solid #3e3a39;
+			    width: 60%;
+			    margin-left: 7px;
+			    vertical-align: middle;
+			}
+			.sidebar {
+				display: block;
+			}
+			.homecontent {
+				display: none!important;
+			}
+			.concat {
+				display: block!important;
+			}
+		}
+	</style>
+	<body>
+		<div class="homecontent">
+			<ul class="nav">
+				<img src="resource/homelogo.png" alt="" class="homelogo" />
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#">HISTORY</a></li>
+				<li><a href="#">JOIN US</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><img class="searchicon" src="resource/searchicon.png" alt=""></li>
+			</ul>
+			<img class="rightbottom" src="resource/rightbottom.png" alt="">
+			<div class="homeinfo">
+				<div class="item">
+					<img class="address" src="resource/addressicon.png" >
+					<span>Guangzhou City, CHINA</span>
+				</div>
+				<div class="item">
+					<img class="phone" src="resource/phoneicon.png" >
+					<span>(+86) 020-33694148</span>
+				</div>
+				<div class="item">
+					<img class="email" src="resource/emailicon.png" >
+					<span>customer@selz1871.com</span>
+				</div>
+			</div>
+		</div>
+		<div class="mobilenav">
+			<img class="img1" width="45" height="32" src="./resource/image/mobile/nav/menu.png">
+			<img class="img2" width="35" height="38" src="./resource/image/mobile/nav/share.png">
+			<img class="img3" width="57" height="49" src="./resource/image/mobile/nav/logo.png">
+			<img class="img4" width="39" height="39" src="./resource/image/mobile/nav/search.png">
+		</div>
+		<div class="sidebar">
+			<img class='barlogo' width="166" height="47" src="./resource/image/mobile/sidebar/logo.png" alt="">
+			<ul class="barnav">
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#history">HISTORY</a></li>
+				<li><a href="#about">JOIN US</a></li>
+				<li><a href="#about">CONTACT</a></li>
+			</ul>
+			<div class="closebtn">
+				<img width="32" height="32" src="./resource/image/mobile/sidebar/error.png" >
+			</div>
+		</div>
+		<div class="header">
+			<ul class="nav">
+				<img src="resource/homelogo.png" alt="" class="homelogo" />
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#">HISTORY</a></li>
+				<li><a href="#">JOIN US</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><img class="searchicon" src="resource/searchicon.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul class="nav nav2">
+				<img src="resource/homelogo.png" alt="" class="homelogo" />
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#">HISTORY</a></li>
+				<li><a href="#">JOIN US</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><img class="searchicon" src="resource/searchicon.png" alt=""></li>
+			</ul>
+			<div class="historyinfo" id="history">
+				<div class="infoheader">
+					<p class="title">品牌历史</p>
+					<p class="middle">
+						<span>SELZ</span> | Brand history <span class="mark"></span><span class="line"></span>
+					</p>
+					<p class="assist">“MAKE YOUR FEET GLAD”</p>
+				</div>
+				<div class="infohtml" style="text-indent:2em">
+					<p >1871年，Morris Selz先生在美国芝加哥以家族为名成立了SELZ皮鞋公司，专门生产和销售皮鞋产品。在一次偶然的市场调查当中，Morris Selz先生发现当时大部分的鞋商都将精力耗费在鞋子的外观上，反而最关键的舒适感无人在乎。
+					</p>
+					<p>或许是SELZ姓氏的人天生对鞋有种狂热追求（SELZ在美国俄亥俄州是著名的制鞋家族姓氏），Morris Selz先生以及其家族成员开始对一双鞋当中对舒适感影响最大的部分——中底，进行了持续百年的深入研发，以“MAKE YOU FEET GLAD”为品牌使命，希望每位消费者都有“解放双足”的体验。</p>
+					<br><br>
+					<!--<ul style="padding-left: 35px;">-->
+					<ul>
+						<li>1919年，美國著名棒球手Joe Jackson代言SELZ品牌；</li>
+						<li>1953年Jim Peters穿著SELZ跑鞋在Polytechnic馬拉松賽上創造了新的世界紀錄；</li>
+						<li>1972年，SELZ成为波士顿马拉松的跑鞋供应商之一，合作选手包括著名的首位女性马拉松选手Kathrine Virginia。 </li>
+						<li>1989年，成為世界高塔競速協會的首批贊助商之一; </li>
+						<li>2008年，民主設計項目創立，邀請運動員和大學生共同參與鞋款設計; </li>
+						<li>2012年，以輕運動生活方式品牌的概念向全球市場進發; </li>
+						<li>2020年，重啟品牌，攜帶全新形象，登陸中國</li>
+					</ul>
+				</div>
+				<div class="imgnav">
+					<div class="item">
+						<img src="resource/image/history/img1.png" width="254" height="304" alt="">
+						<span>1871年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img2.png" width="254" height="304" alt="">
+						<span>1910年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img3.png" width="254" height="304" alt="">
+						<span>1919年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img4.png" width="254" height="304" alt="">
+						<span>1953年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img5.png" width="254" height="304" alt="">
+						<span>1972年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img6.png" width="254" height="304" alt="">
+						<span>1989年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img7.png" width="254" height="304" alt="">
+						<span>2008年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img8.png" width="254" height="304" alt="">
+						<span>2020年</span>
+					</div>
+				</div>
+			</div>		
+			<div class="concat">
+				<div class="info" id="about">
+					<div class="infoheader">
+						<p class="title">关于我们</p>
+						<p class="middle">
+							<span>SELZ</span> | CONTACT US <span class="mark"></span><span class="line"></span>
+						</p>
+					</div>
+					<div class="imgnav">
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img1.png" width="304" height="213" alt="">
+								<p>HOW IS THE SELZ?</p>
+								<span>SELZ创立于1871年， 是当时美国芝加哥最领先的鞋履品牌之一，距今已有148年的品牌历史。 在1918年，品牌开始在美国体育运动领域有着卓越的成就， 尤其是在棒球领域受到广大的欢迎与喜爱。 </span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img2.png" width="304" height="213" alt="">
+								<p>MAKE YOUR FEET GLAD</p>
+								<span>从品牌建立初始，一直秉承着品牌标语：“MAKE YOUR FEET GLAD”（解放双足）的概念， 并将这个品牌理念延续了一百多年，是品牌最核心的价值。 </span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img3.png" width="304" height="213" alt="">
+								<p>HOW IS THE SELZ?</p>
+								<span>SELZ认为在快节奏的生活压力下，拥有积极乐观的生活态度是非常必要的。 放慢生活节奏，拥抱无限自由，去感受“轻生活”的真谛与美好。 从身体的释放到心灵的释放，是对自然生活状态的追求，也是体验趣味生活的开始。</span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+					</div>
+				</div>
+				<div class="contactinfo">
+					<p class="title">Contact US</p>
+					<p>SELZ 中国</p>
+					<br>
+					<p>WeChat Account: SELZ赛尔兹</p>
+					<p>微信号：SELZ赛尔兹</p>
+					<br>
+					<p>WeChat Official Account 官方微信公众号：</p>
+					<p>SELZ赛尔兹</p>
+					<br>
+					<p>Weibo Official Account 官方微博：</p>
+					<p>SELZ赛尔兹</p>
+					<br>
+					<p>Business Cooperation 商务合作：</p>
+					<p>Telephone：020-33694148</p>
+					<p>Email：bd@harmay.com</p>
+					<br>
+					<p>Customer Service 售后服务：</p>
+					<p>Service Number: +86-020-33694148</p>
+					<p>Service Time: 09:00-18:00</p>
+					<p>Email: customer@selz1871.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="mobilefooter">
+			<img class="logo" width="64" height="55" src="./resource/image/mobile/nav/logo.png">
+			<div class="footerinfo">
+				<div class="addressinfo">
+					<div class="item">
+						<img class="address" src="resource/image/mobile/footer/address.png">
+						<span>Guangzhou City, CHINA</span>
+					</div>
+					<div class="item">
+						<img class="phone" src="resource/image/mobile/footer/phone.png">
+						<span>(+86) 020-33694148</span>
+					</div>
+					<div class="item">
+						<img class="email" src="resource/image/mobile/footer/email.png">
+						<span>customer@selz1871.com</span>
+					</div>
+				</div>
+				<div class="concatinfo">
+					<img width="14" height="14" src="resource/image/mobile/footer/facebook.png">
+					<img width="15" height="13" src="resource/image/mobile/footer/twitter.png">
+					<img width="15" height="15" src="resource/image/mobile/footer/instagram.png">
+					<img width="16" height="16" src="resource/image/mobile/footer/google.png">
+					<img width="16" height="16" src="resource/image/mobile/footer/wechat.png">
+					<img width="18" height="16" src="resource/image/mobile/footer/weibo.png">
+					<span>Copyright @SELZ. All Right Reserved.</span>
+					<span>©赛尔兹SELZ（中国）版权所有</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>http://www.selz1871.com&nbsp;&nbsp;&nbsp;&nbsp;Copyright @SELZ. All Right Reserved.</p>
+			<p>©赛尔兹SELZ（中国）版权所有</p>
+		</div>
+		<div class="mask"></div>
+		<div class="searchview">
+			<input type="text" />
+			<img width="30" height="30" src="resource/image/mobile/nav/searchicon.png">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5">
+		<title>赛尔兹-Selz.com（中国）-赛尔兹（Selz</title>
+		<link rel="stylesheet" type="text/css" href="resource/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="resource/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="resource/css/info.css" />
+		<link rel="stylesheet" type="text/css" href="resource/css/history.css" />
+		<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+	</head>
+	<script>
+		// var curentPage = 'Home'
+		window.addEventListener('resize', function() {
+			if (window.outerWidth < 350) {
+				document.querySelector('[name="viewport"]').content = "width=device-width, user-scalable=no, initial-scale=0.4"
+			} else {
+				document.querySelector('[name="viewport"]').content = "width=device-width, user-scalable=no, initial-scale=0.5"
+			}
+		    // 变化后需要做的事
+		})
+		window.onload = function (){ 
+
+				document.querySelector('.concat').style.display = 'none'
+			// 轮播图
+				setInterval(function() {
+			    if ($('.bannerimg img').eq(0).css('opacity') > 0) {
+			        $('.bannerimg img').eq(1).css('opacity', 1)
+			        $('.bannerimg img').eq(0).css('opacity', 0)
+			    }
+			    if ($('.bannerimg img').eq(1).css('opacity') > 0) {
+			        $('.bannerimg img').eq(2).css('opacity', 1)
+			        $('.bannerimg img').eq(1).css('opacity', 0)
+			    }
+			    if ($('.bannerimg img').eq(2).css('opacity') > 0) {
+			        $('.bannerimg img').eq(0).css('opacity', 1)
+			        $('.bannerimg img').eq(2).css('opacity', 0)
+			    }
+			},3000)
+			setInterval(function() {
+			    if ($('.bannerimg2 img').eq(0).css('opacity') > 0) {
+			        $('.bannerimg2 img').eq(1).css('opacity', 1)
+			        $('.bannerimg2 img').eq(0).css('opacity', 0)
+			    }
+			    if ($('.bannerimg2 img').eq(1).css('opacity') > 0) {
+			        $('.bannerimg2 img').eq(2).css('opacity', 1)
+			        $('.bannerimg2 img').eq(1).css('opacity', 0)
+			    }
+			    if ($('.bannerimg2 img').eq(2).css('opacity') > 0) {
+			        $('.bannerimg2 img').eq(0).css('opacity', 1)
+			        $('.bannerimg2 img').eq(2).css('opacity', 0)
+			    }
+			},3000)
+			document.querySelector('.img4').onclick = function () {
+				document.querySelector('.mask').style.display = 'block'
+				document.querySelector('.searchview').style.display = 'block'
+			}
+			document.querySelector('.mask').onclick = function () {
+				document.querySelector('.mask').style.display = 'none'
+				document.querySelector('.searchview').style.display = 'none'
+			}
+			document.querySelector('.img1').onclick = function () {
+				document.querySelector('.sidebar').style.left = '0px'
+				document.querySelector('.mobilenav').style.display = 'none'
+			}
+			document.querySelector('.closebtn').onclick = function () {
+				document.querySelector('.sidebar').style.left = '-600px'
+				document.querySelector('.mobilenav').style.display = 'block'
+
+			}
+			// document.querySelectorAll('.barnav a').forEach(function(obj) {
+			//     obj.onclick = function() {
+			// 		document.querySelector('.sidebar').style.left = '-600px'
+			// 			document.querySelector('.mobilenav').style.display = 'block'
+
+			// 		document.querySelectorAll('.barnav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+
+			//         this.className += 'selected';
+			//     }
+			// })
+			// document.querySelectorAll('.homecontent .nav a').forEach(function(obj, index) {
+			// 	obj.onclick = function() {
+			// 		document.querySelectorAll('.header .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.content .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.header .nav a')[index].className += 'selected'
+			// 		document.querySelector('.homecontent').style.display = 'none'
+			// 		document.querySelector('.header').style.display = 'block'
+			// 		document.querySelector('.content').style.display = 'block'
+			// 		document.querySelector('.footer').style.display = 'block'
+			// 		if(index == 1 || index == 2) {
+			// 			document.querySelector('.historyinfo').style.display = 'block'
+			// 			document.querySelector('.concat').style.display = 'none'
+			// 		}else {
+			// 			document.querySelector('.historyinfo').style.display = 'none'
+			// 			document.querySelector('.concat').style.display = 'block'
+			// 		}
+			// 	}
+			// })
+			// document.querySelectorAll('.header .nav a').forEach(function(obj, index) {
+			// 	obj.onclick = function() {
+			// 		document.querySelectorAll('.header .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.content .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.header .nav a')[index].className += 'selected'
+			// 		document.querySelectorAll('.header .nav a')[index].className += 'selected'
+			// 		if(index == 0) {
+			// 			document.querySelector('.homecontent').style.display = 'block'
+			// 			document.querySelector('.header').style.display = 'none'
+			// 			document.querySelector('.content').style.display = 'none'
+			// 			document.querySelector('.footer').style.display = 'none'
+			// 		}
+			// 		if(index == 1 || index == 2) {
+			// 			document.querySelector('.historyinfo').style.display = 'block'
+			// 			document.querySelector('.concat').style.display = 'none'
+			// 		}else {
+			// 			document.querySelector('.historyinfo').style.display = 'none'
+			// 			document.querySelector('.concat').style.display = 'block'
+			// 		}
+			// 	}
+			// })
+			// document.querySelectorAll('.header .nav a').forEach(function(obj, index) {
+			// 	obj.onclick = function() {
+			// 		document.querySelectorAll('.header .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.header .nav a').forEach(function(obj) {
+			// 			obj.className = '';
+			// 		})
+			// 		document.querySelectorAll('.header .nav a')[index].className += 'selected'
+			// 		if(index == 0) {
+			// 			document.querySelector('.homecontent').style.display = 'block'
+			// 			document.querySelector('.header').style.display = 'none'
+			// 			document.querySelector('.content').style.display = 'none'
+			// 			document.querySelector('.footer').style.display = 'none'
+			// 		}
+			// 		if(index == 1 || index == 2) {
+			// 			document.querySelector('.historyinfo').style.display = 'block'
+			// 			document.querySelector('.concat').style.display = 'none'
+			// 		}else {
+			// 			document.querySelector('.historyinfo').style.display = 'none'
+			// 			document.querySelector('.concat').style.display = 'block'
+			// 		}
+			// 	}
+			// })
+			document.querySelector('.searchview img').onclick = function () {
+				if (document.querySelector('input').value == '历史') {
+					window.location.href = window.location.pathname + "#history";
+					document.querySelector('.mask').style.display = 'none'
+					document.querySelector('.searchview').style.display = 'none'
+				}
+			}
+		} 
+	</script>
+
+	<body>
+		<!-- PC首页轮播图 -->
+		<div class="homecontent" style="display: none;">
+			<div class="bannerimg" style="width: 100%;height: 100%;">
+				<img src="resource/homebg.png" style="width: 100%; height: 100%; opacity: 0; transition: all 2s ease-out 0s; position: absolute; top: 0px;">
+				<img src="resource/image/banner2.jpg" style="width: 100%; height: 100%; opacity: 1; transition: all 2s ease-out 0s; position: absolute; top: 0px;">
+				<img src="resource/image/banner3.jpg" style="
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					transition: all 2s ease-out 0s;
+					position: absolute;
+					top: 0;
+				">
+			</div>
+			<!-- PC首页导航栏 -->
+			<ul class="nav">
+				<img src="resource/homelogo.png" alt="" class="homelogo" />
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#">HISTORY</a></li>
+				<li><a href="#">JOIN US</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+			<!-- 首页信息部分 -->
+			<div class="homeinfo">
+				<div class="item">
+					<img class="address" src="resource/addressicon.png" >
+					<span>Guangzhou City, CHINA</span>
+				</div>
+				<div class="item">
+					<img class="phone" src="resource/phoneicon.png" >
+					<span>(+86) 020-33694148</span>
+				</div>
+				<div class="item">
+					<img class="email" src="resource/emailicon.png" >
+					<span>customer@selz1871.com</span>
+				</div>
+			</div>
+		</div>
+		<!-- 手机导航栏 -->
+		<div class="mobilenav">
+			<img class="img1" width="45" height="32" src="./resource/image/mobile/nav/menu.png">
+			<img class="img2" width="35" height="38" src="./resource/image/mobile/nav/share.png">
+			<img class="img3" width="57" height="49" src="./resource/image/mobile/nav/logo.png">
+			<img class="img4" width="39" height="39" src="./resource/image/mobile/nav/search.png">
+		</div>
+		<!-- 手机隐藏列表 -->
+		<div class="sidebar">
+			<img class='barlogo' width="166" height="47" src="./resource/image/mobile/sidebar/logo.png" alt="">
+			<ul class="barnav">
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#history">HISTORY</a></li>
+				<li><a href="#about">JOIN US</a></li>
+				<li><a href="#about">CONTACT</a></li>
+			</ul>
+			<div class="closebtn">
+				<img width="32" height="32" src="./resource/image/mobile/sidebar/error.png" >
+			</div>
+		</div>
+		<!-- 除首页外PC公共头部 -->
+		<div class="header" style="display: block;">
+				<ul class="nav">
+				<img src="resource/homelogo.png" alt="" class="homelogo" />
+				<li><a class="selected" href="#">HOME</a></li>
+				<li><a href="#">HISTORY</a></li>
+				<li><a href="#">JOIN US</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<!-- <li>
+					<p class="pcsearch"><img class="searchicon" src="resource/searchicon.png" alt="" style=""><span>SEARCH</span></p>
+				</li> -->
+			</ul>
+		</div>
+		<!-- 品牌历史区域 -->
+		<div class="content" style="display: block;">
+			<div class="historyinfo" id="history" style="display: block;">
+				<div class="infoheader">
+					<p class="title">品牌历史</p>
+					<p class="middle">
+						<span>SELZ</span> | Brand history <span class="mark"></span><span class="line"></span>
+					</p>
+					<p class="assist">“MAKE YOUR FEET GLAD”</p>
+				</div>
+				<div class="infohtml" >
+					<img class="historyimg" src="resource/image/history/img9.png"  alt="">
+					<br>
+					<p style="text-indent:2em">SELZ創立於1871年美國芝加哥。148年以來，SELZ堅持以“MAKE YOUR FEET GLAD（解放雙足）”為品牌願景，始終專註舒適鞋履的研發，並把舒適概念延展到出行生活等周邊產品，通過不斷提升品質致力於讓消費者以便宜的價格買到功能優良、穿著舒適的產品，傳遞出“自然、健康、歡樂”的輕運動生活態度。
+					</p>
+					<ul>
+						<li>1871年，Morris Selz在美國芝加哥成立SELZ皮鞋公司；</li>
+						<li>1918年，美國著名棒球手Joe Jackson代言SELZ品牌； </li>
+						<li>1953年，Jim Peters穿著SELZ跑鞋在Polytechnic馬拉松賽上創造了新的世界紀錄；</li>
+						<li>1972年，SELZ成为波士顿马拉松的跑鞋供应商之一，合作选手包括著名的首位女性马拉松选手Kathrine Virginia； </li>
+						<li>1989年，成為世界高塔競速協會的首批贊助商之一; </li>
+						<li>2008年，民主設計項目創立，邀請運動員和大學生共同參與鞋款設計; </li>
+						<li>2010年，SELZ公司的產品從運動鞋延伸至運動服裝、生活配件、電子產品、出行產品，在延續對舒適體驗的同時，亦開始關注全球的輕運動趨勢； </li>
+						<li>2020年，重啟品牌，攜帶全新形象，登陸中國</li>
+					</ul>
+				</div>
+				<div class="imgnav">
+					<div class="item">
+						<img src="resource/image/history/img1.png" width="254" height="304" alt="">
+						<span>1871年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img2.png" width="254" height="304" alt="">
+						<span>1910年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img3.png" width="254" height="304" alt="">
+						<span>1918年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img4.png" width="254" height="304" alt="">
+						<span>1953年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img5.jpg" width="254" height="304" alt="">
+						<span>1972年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img6.jpg" width="254" height="304" alt="">
+						<span>1989年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img7.png" width="254" height="304" alt="">
+						<span>2008年</span>
+					</div>
+					<div class="item">
+						<img src="resource/image/history/img8.png" width="254" height="304" alt="">
+						<span>2020年</span>
+					</div>
+				</div>
+			</div>		
+			<!-- 关于我们内容 -->
+			<div class="concat">
+				<div class="info" id="about">
+					<div class="infoheader">
+						<p class="title">关于我们</p>
+						<p class="middle">
+							<span>SELZ</span> | CONTACT US <span class="mark"></span><span class="line"></span>
+						</p>
+					</div>
+					<div class="imgnav">
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img1.png" width="304" height="213" alt="">
+								<p>HOW IS THE SELZ?</p>
+								<span>SELZ创立于1871年， 是当时美国芝加哥最领先的鞋履品牌之一，距今已有148年的品牌历史。 在1918年，品牌开始在美国体育运动领域有着卓越的成就， 尤其是在棒球领域受到广大的欢迎与喜爱。 </span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img2.png" width="304" height="213" alt="">
+								<p>MAKE YOUR FEET GLAD</p>
+								<span>从品牌建立初始，一直秉承着品牌标语：“MAKE YOUR FEET GLAD”（解放双足）的概念， 并将这个品牌理念延续了一百多年，是品牌最核心的价值。 </span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img3.png" width="304" height="213" alt="">
+								<p>HOW IS THE SELZ?</p>
+								<span>SELZ认为在快节奏的生活压力下，拥有积极乐观的生活态度是非常必要的。 放慢生活节奏，拥抱无限自由，去感受“轻生活”的真谛与美好。 从身体的释放到心灵的释放，是对自然生活状态的追求，也是体验趣味生活的开始。</span>
+							</div>
+							<a href="###">Read More...</a>
+						</div>
+					</div>
+				</div>
+				<div class="contactinfo">
+					<p class="title">Contact US</p>
+					<p>SELZ 中国</p>
+					<br>
+					<p>WeChat Account: SELZ赛尔兹</p>
+					<p>微信号：SELZ赛尔兹</p>
+					<br>
+					<p>WeChat Official Account 官方微信公众号：</p>
+					<p>SELZ赛尔兹</p>
+					<br>
+					<p>Weibo Official Account 官方微博：</p>
+					<p>SELZ赛尔兹</p>
+					<br>
+					<p>Business Cooperation 商务合作：</p>
+					<p>Telephone：020-33694148</p>
+					<p>Email：bd@selz1871.com</p>
+					<br>
+					<p>Customer Service 售后服务：</p>
+					<p>Service Number: +86-020-33694148</p>
+					<p>Service Time: 09:00-18:00</p>
+					<p>Email: customer@selz1871.com</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- 手机底部 -->
+		<div class="mobilefooter">
+			<img class="logo" width="64" height="55" src="./resource/image/mobile/nav/logo.png">
+			<div class="footerinfo">
+				<div class="addressinfo">
+					<div class="item">
+						<img class="address" src="resource/image/mobile/footer/address.png">
+						<span>Guangzhou City, CHINA</span>
+					</div>
+					<div class="item">
+						<img class="phone" src="resource/image/mobile/footer/phone.png">
+						<span>(+86) 020-33694148</span>
+					</div>
+					<div class="item">
+						<img class="email" src="resource/image/mobile/footer/email.png">
+						<span>customer@selz1871.com</span>
+					</div>
+				</div>
+				<div class="concatinfo">
+					<img width="14" height="14" src="resource/image/mobile/footer/facebook.png">
+					<img width="15" height="13" src="resource/image/mobile/footer/twitter.png">
+					<img width="15" height="15" src="resource/image/mobile/footer/instagram.png">
+					<img width="16" height="16" src="resource/image/mobile/footer/google.png">
+					<img width="16" height="16" src="resource/image/mobile/footer/wechat.png">
+					<img width="18" height="16" src="resource/image/mobile/footer/weibo.png">
+					<span>Copyright @SELZ. All Right Reserved.</span>
+					<span>©赛尔兹SELZ（中国）版权所有</span>
+				</div>
+			</div>
+		</div>
+		<!-- PC底部 -->
+		<div class="footer" style="display: block;">
+			<p>http://www.selz1871.com&nbsp;&nbsp;&nbsp;&nbsp;Copyright @SELZ. All Right Reserved.</p>
+			<p>©赛尔兹SELZ（中国）版权所有</p>
+		</div>
+		<!-- 遮挡层 -->
+		<div class="mask"></div>
+		<!-- 手机端搜索框 -->
+		<div class="searchview">
+			<input type="text" />
+			<img width="30" height="30" src="resource/image/mobile/nav/searchicon.png">
+		</div>
+	</body>
+</html>

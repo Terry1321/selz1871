@@ -1,0 +1,56 @@
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity:1;
+     }
+    25% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0;    
+    }
+    75% {
+        opacity:1;
+    }
+}
+.anim_fade_image {
+    position:absolute;    
+    -webkit-animation-name: fadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-direction: alternate;
+}
+.homecontent {
+	height: 100vh;
+}
+.homecontent .rightbottom {
+	width: 182px;
+	position: absolute;
+	right: 33px;
+	bottom: 35px;
+}
+.homeinfo {
+	position: absolute;
+	right: 10px;
+	color: black;
+	top: 36px;
+}
+.homeinfo .item {
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 19px;
+}
+.homeinfo .item img.address {
+	width: 9px;
+}
+.homeinfo .item img.phone {
+	width: 7px;
+}
+.homeinfo .item img.email {
+	width: 17px;
+}
+
+.homeinfo .item span{
+	vertical-align: text-top;
+	margin-left: 9px;
+}
