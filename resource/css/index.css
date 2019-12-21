@@ -87,8 +87,60 @@
     background: #000;
     min-height: 100px;
     width: 100%;
+    /* 不留白 */
+    height: 100%;
+    color: #fff;
     line-height: 100px;
 }
+.homeFooter .logo {
+    padding: 81px;
+}
+.homeFooter .footerinfo {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+    margin-top: 81px;
+}
+.homeFooter .addressinfo {
+    display: inline-block;
+    width: 100%;
+}
+.homeFooter .addressinfo .item {
+    display: inline-block;
+    margin-left: 5%;
+}
+.homeFooter .addressinfo .item span {
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+}
+.homeFooter .addressinfo .item:first-child {
+    margin-left: 0px;
+}
+.homeFooter .email {
+     width: 25px;
+}
+.homeFooter .address {
+     width: 18px;
+}
+.homeFooter .icongroup {
+    display: inline-block;
+    float: right;
+}
+.homeFooter .icongroup img {
+    margin-left: 22px;
+}
+
+.homeFooter .copyrightinfo{
+   display: inline-block;
+    width: 100%;
+}
+.homeFooter .copyrightinfo span:last-child {
+    margin-left: 40px;
+}
+
 .gallery{
     margin-bottom: 0 !important;
 }
+
+
