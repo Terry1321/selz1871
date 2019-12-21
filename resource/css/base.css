@@ -141,18 +141,32 @@ q:after {
   src: url(./../MYRIADPRO-BOLD.OTF) format("truetype");
 }
 
-/***********************************************************¹«¹²²ÎÊı***********************************************************/
+
+/***********************************************************å…¬å…±å‚æ•°***********************************************************/
+.wt{
+	transition: width 0.5s;
+}
+.pt{
+	transition: padding-left 0.5s;
+}
+.pc{
+	display: block !important; 
+}
+.mb{
+	display: none; !important; 
+}
 .header, .content, .footer,.sidebar {
 	display: none; 
 }
 .header {
+	display: none;
 	height: 30.33vw;
 	background: url(./../image/header.jpg);
 	background-size: 100%;
 	/*background-position: 0px -100px;*/
 }
 /*
- ***********************************************************PC¶Ëµ¼º½À¸ **********************************************************
+ ***********************************************************PCå¯¼èˆªæ  **********************************************************
 */
 
 .nav {
@@ -161,7 +175,7 @@ q:after {
 	color: #000;
 	font-size: 22px;
 	font-weight: 500;
-	display: block;
+	/*display: block;*/
 }
 
 .nav a {
@@ -173,14 +187,16 @@ q:after {
 .nav a.selected {
 	color: #005B9F;
 }
-
 .nav a:hover {
+	letter-spacing: 5px;
+	transition: letter-spacing 0.5s;
 	text-decoration: none;
 	color: #005B9F;
 }
 
 .nav li {
-	margin-top: 3vw;
+	line-height: 62px;
+	/*margin-top: 3vw;*/
 }
 
 .nav .searchicon {
@@ -191,7 +207,7 @@ q:after {
 .pcsearch {
     width: 1.9vw;
     overflow: hidden;
-    display: block;
+    /*display: block;*/
     height: 2.1vw;
     white-space: nowrap;
     transition: all 0.2s ease-out 0s;
@@ -219,11 +235,11 @@ q:after {
 }
 
 /*
- **********************************************************ÊÖ»ú¶Ëµ¼º½À¸ **********************************************************
+ **********************************************************æ‰‹æœºå¯¼èˆª **********************************************************
 */
 
 .sidebar {
-	display: none;
+	/*display: none;*/
 }
 .mask {
 	display: none;
@@ -288,7 +304,7 @@ q:after {
 	margin-top: 30px;
 }
 .mobilenav {
-	display: none;
+	/*display: none;*/
 }
 .footer {
 	float: left;
@@ -298,7 +314,7 @@ q:after {
 }
 
 /*
-  ***********************************************************PCµ×²¿À¸ **********************************************************
+  ***********************************************************PCåº•éƒ¨ **********************************************************
 */
 .footer p {
 	margin-top: 10px
@@ -328,81 +344,84 @@ q:after {
 	height: 100px;
 }
 
-/*
-  ***********************************************************ÊÖ»úµ×²¿À¸ **********************************************************
-*/
-.mobilefooter {
-	display: none;
-}
 
 /*
-  ***********************************************************ÏñËØ´óÓÚ1000 **********************************************************
+  ***********************************************************å°äº1220åƒç´  **********************************************************
 */
-@media screen and (min-width: 1000px) {
-	@keyframes navHover{
-		from {letter-spacing:normal;}
-		to {letter-spacing: 5px;}
+
+@media screen and (max-width: 1200px) {
+	.nav{
+		padding-left: 5%;
 	}
-	.nav li a{
-		transition: all 0.2s linear;
+	.homelogo{
+		width: 140px;
 	}
-	.nav li a:hover{
-		letter-spacing: 5px;
-		animation: navHover 0.5s;
-		-moz-animation: navHover 0.5s;	/* Firefox */
-		-webkit-animation: navHover 0.5s;	/* Safari ºÍ Chrome */
-		-o-animation: navHover 0.5s;	/* Opera */
+
+	.nav a{
+		font-size: 20px;
+		transition: font-size 0.5s;
+
 	}
-	.mobilenav,.historyimg{
-		display: none !important;
+	.nav li{
+		line-height: 50px;
 	}
 }
-@media screen and (max-width: 993px) {
+
+  /************************************************************å°äº993åƒç´  ***********************************************************/
+
+/*@media screen and (max-width: 993px) {
 	.homelogo{
-		width: 147px;
+		width: 110px;
 	}
 	.nav{
 		padding-left:18px; 
 	}
 	.nav a{
-		font-size: 22px;
+		font-size: 18px;
+
 	}
-}
+	.nav li{
+		line-height: 43px;
+	}
+}*/
 
 /*
-  ***********************************************************ÏñËØĞ¡ÓÚ1000 **********************************************************
+  ***********************************************************å°äº768åƒç´  **********************************************************
 */
 @media screen and (max-width: 768px) {
-	/*******************¹«¹²ÇøÓò*********************************/
+	/*******************å…¬å…±å‚æ•°*********************************/
+	.pc{display: none!important;}
+	.mb{display: block!important;}
 	.homecontent {
 		display: none!important;
 	}
 	.concat {
 		display: block!important;
 	}
-	.header, .content, .footer {
+/*	.header, .content, .footer {
 		display: block!important;
-	}
-	/**************************ÊÖ»úÂÖ²¥Í¼ ***********************/
+	}*/
+	/**************************è½®æ’­å›¾ ***********************/
 	.header {
 		height: 155vw;
+		background:  none;
 	}
-	.header .bannerimg2 img {
-		object-fit: cover;
+	.header .gallery div {
+		width: 100%;
 		height: 155vw;
 	}
-	/* *************************ÊÖ»úµ¼º½À¸ **********************/
+	/* *************************æ‰‹æœºå¯¼èˆª **********************/
 	.mobilenav {
-		display: block;
+		/*display: block;*/
 		z-index: 9;
 		position: fixed;
 		top: 0px;
 		width: 100%;
 	}
 	.nav {
-		display: none;
+		/*display: none;*/
 	}
-	/* ****************ÊÖ»úµ¼º½À¸Õ¹¿ªÁĞ±í ***************/
+	/* ****************æ‰‹æœºå¯¼èˆªåˆ—è¡¨ ***************/
 	.sidebar {
 		-webkit-transition: all 0.5s ease;
 		-o-transition: all 0.5s ease;
@@ -449,11 +468,11 @@ q:after {
 		color: #005B9F;
 	}
 	.sidebar {
-		display: block;
+		/*display: block;*/
 	}
-	/* ***************************************ÊÖ»úµ×²¿À¸ ****************************************/
+	/* ***************************************æ‰‹æœºåº•éƒ¨ ****************************************/
 	.mobilefooter {
-		display: block;
+		/*display: block;*/
 		float: left;
 		width: 100%;
 		margin-top: 196px;
@@ -507,6 +526,56 @@ q:after {
 	}
 	
 	.footer {
-		display: none!important;
+		/*display: none!important;*/
 	}
+}
+
+
+/*******å­é¡µé¢çš„æ ‡é¢˜æ ·å¼************/
+.infoheader {
+	color: #000000;
+	margin-top: 122px;
+}
+
+.infoheader .title {
+	font-size: 25px;
+}
+
+.infoheader .middle {
+	color: black;
+	font-size: 20px;
+	line-height: 57px;
+}
+
+.infoheader .middle .line {
+	margin-top: 0px;
+	display: inline-block;
+	border-bottom: 1px solid #3e3a39;
+	width: 50px;
+	margin-left: 7px;
+	vertical-align: middle;
+}
+
+.infoheader .middle span {
+	color: #000000;
+	font-weight: 500;
+}
+
+.infoheader .middle span.mark {
+	background: #3e3a39;
+	width: 5px;
+	height: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.infoheader .assist {
+	font-size: 10px;
+}
+ .title{
+	font-family: "chinese";
+}
+ .infoheader .middle span{
+	font-family: "english";
 }

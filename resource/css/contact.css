@@ -1,0 +1,21 @@
+.contact .imgnav {
+	margin-top: 9%;
+	width: 80%;
+	height: 100px;
+	text-align: center;
+}
+.contact .imgnav .item{
+	float: left;
+	width: 30%;
+	margin-right: 3%;	
+	margin-top: 7.5%;
+}
+.contact .imgnav .item img{
+	width: 25%;
+	height: auto;
+	/*min-height: 500px;*/
+}
+.contact .imgnav .item p{
+	width: 100%;
+	font-size: 28.58px;
+}

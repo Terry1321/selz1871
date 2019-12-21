@@ -1,75 +1,63 @@
 .info {
-width: 74%;
+	padding-left: 25%;
+	box-sizing: border-box;
 }
-.infoheader {
-	color: #000000;
-	margin-top: 122px;
+.about .imgnav {
+	margin-top: 9%;
+	width: 100%;
 }
-
-.infoheader .title {
-	font-size: 25px;
-}
-
-.infoheader .middle {
-	color: black;
-	font-size: 20px;
-	line-height: 57px;
-}
-
-.infoheader .middle .line {
-	margin-top: 0px;
-	display: inline-block;
-	border-bottom: 1px solid #3e3a39;
-	width: 50px;
-	margin-left: 7px;
-	vertical-align: middle;
-}
-
-.infoheader .middle span {
-	color: #000000;
-	font-weight: 500;
-}
-
-.infoheader .middle span.mark {
-	background: #3e3a39;
-	width: 5px;
-	height: 5px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-left: 10px;
-}
-
-.infoheader .assist {
-	font-size: 10px;
-}
-.concat .imgnav .item{
+.about .imgnav .item{
+	float: left;
 	width: 27%;	
+	margin-right:3.5%;
 }
-.concat a {
-	color: #005cb9;
-	text-decoration: none;
-	font-size: 0.83vw;
+.about .imgnav .item img{
+	width: 100%;
+	height: auto;
 }
-.contactinfo {
-	width: calc(80% - 72px);
-	display: inline-block;
-	color: black;
-	line-height: 27px;
-	margin-left: 20%;
-	margin-top: 138px;
-	font-size: 15px;
+.about .imgnav .item span{
+	width: 100%;
 }
-
-.contactinfo .title {
-	font-weight: 800;
+.itemcontent p{
+	font-family: "english";
+	margin: 20px 0;
 }
-/**
- *像素大于1000
-**/
-@media screen and (min-width: 1000px) {
-
+.itemcontent span{
+	font-family: "chinese";
 }
 
+/*@media screen and (min-width: 1201px) and (max-width: 1400px) {
+	.info {
+		padding-left: 16%;
+	}
+	.nav{
+		padding-left: 25px ;
+	}
+	.nav img{
+		width: 130px;
+	}
+	.nav a{
+		line-height: 60px;
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 994px) and (max-width: 1201px) {
+	.about .imgnav {
+		margin-top: 80px;
+		width: 800px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 993px){
+	.nav{
+		padding-left: 50px ;
+	}
+	.info .imgnav,.info .infohtml{
+		margin-top: 80px;
+		width: 640px;
+	}
+}*/
 
 /**
  *像素小于1000
@@ -77,7 +65,7 @@ width: 74%;
 @media screen and (max-width: 768px) {
 	.info {
 		box-sizing: border-box;
-		padding: 0px 0px 0px 10%;
+		padding: 0px 8%;
 		width: 100%;
 	}
 
@@ -91,8 +79,7 @@ width: 74%;
 	}
 
 	.info .item img {
-		width: 206px;
-		height: 129px;
+		width: 100%;
 	}
 
 	.info .imgnav .item span {
@@ -102,19 +89,10 @@ width: 74%;
 		color: black;
 		margin-top: 16px;
 	}
-
-	.contactinfo {
-		width: 100%;
-		padding: 0 10%;
-		box-sizing: border-box;
-		font-size: 11px;
-		margin-left: 0px;
-	}
-
-	.concatinfo span {
+	.aboutinfo span {
 	    margin-left: 10px;
 	}
-	.concatinfo img {
+	.aboutinfo img {
 		margin-left: 15px;
 	}
 	.infoheader .middle .line {
@@ -125,6 +103,15 @@ width: 74%;
 	    margin-left: 7px;
 	    vertical-align: middle;
 	}
-	
-
+	.about .imgnav{
+		margin-top: 105px;
+		width: 100%;
+	}
+	.about .imgnav .item{
+		width: 30%;
+		margin-right: 4%
+	}
+	.about .imgnav .item:nth-child(3){
+		margin-right: 0;
+	}
 }

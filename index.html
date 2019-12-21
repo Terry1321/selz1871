@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="resource/css/index.css" />
 		<link rel="stylesheet" type="text/css" href="resource/css/info.css" />
 		<link rel="stylesheet" type="text/css" href="resource/css/history.css" />
+		<link rel="stylesheet" type="text/css" href="resource/css/contact.css" />
+
 		<link rel="stylesheet" type="text/css" href="resource/css/flickity-docs.css" />
 		<script src="resource/js/flickity-docs.min.js"></script>
 		<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
@@ -24,7 +26,7 @@
 		})
 		window.onload = function (){ 
 
-				document.querySelector('.concat').style.display = 'none'
+				// document.querySelector('.about').style.display = 'none'
 			// 轮播图
 			// setInterval(function() {
 			//     if ($('.bannerimg img').eq(0).css('opacity') > 0) {
@@ -54,14 +56,7 @@
 			//         $('.bannerimg2 img').eq(2).css('opacity', 0)
 			//     }
 			// },3000)
-			document.querySelector('.img4').onclick = function () {
-				document.querySelector('.mask').style.display = 'block'
-				document.querySelector('.searchview').style.display = 'block'
-			}
-			document.querySelector('.mask').onclick = function () {
-				document.querySelector('.mask').style.display = 'none'
-				document.querySelector('.searchview').style.display = 'none'
-			}
+
 			document.querySelector('.img1').onclick = function () {
 				document.querySelector('.sidebar').style.left = '0px'
 				document.querySelector('.mobilenav').style.display = 'none'
@@ -69,20 +64,19 @@
 			document.querySelector('.closebtn').onclick = function () {
 				document.querySelector('.sidebar').style.left = '-600px'
 				document.querySelector('.mobilenav').style.display = 'block'
-
 			}
-			// document.querySelectorAll('.barnav a').forEach(function(obj) {
-			//     obj.onclick = function() {
-			// 		document.querySelector('.sidebar').style.left = '-600px'
-			// 			document.querySelector('.mobilenav').style.display = 'block'
+			document.querySelectorAll('.barnav a').forEach(function(obj) {
+			    obj.onclick = function() {
+					document.querySelector('.sidebar').style.left = '-600px'
+						document.querySelector('.mobilenav').style.display = 'block'
 
-			// 		document.querySelectorAll('.barnav a').forEach(function(obj) {
-			// 			obj.className = '';
-			// 		})
+					document.querySelectorAll('.barnav a').forEach(function(obj) {
+						obj.className = '';
+					})
 
-			//         this.className += 'selected';
-			//     }
-			// })
+			        this.className += 'selected';
+			    }
+			})
 			// document.querySelectorAll('.homecontent .nav a').forEach(function(obj, index) {
 			// 	obj.onclick = function() {
 			// 		document.querySelectorAll('.header .nav a').forEach(function(obj) {
@@ -98,10 +92,10 @@
 			// 		document.querySelector('.footer').style.display = 'block'
 			// 		if(index == 1 || index == 2) {
 			// 			document.querySelector('.historyinfo').style.display = 'block'
-			// 			document.querySelector('.concat').style.display = 'none'
+			// 			document.querySelector('.about').style.display = 'none'
 			// 		}else {
 			// 			document.querySelector('.historyinfo').style.display = 'none'
-			// 			document.querySelector('.concat').style.display = 'block'
+			// 			document.querySelector('.about').style.display = 'block'
 			// 		}
 			// 	}
 			// })
@@ -123,10 +117,10 @@
 			// 		}
 			// 		if(index == 1 || index == 2) {
 			// 			document.querySelector('.historyinfo').style.display = 'block'
-			// 			document.querySelector('.concat').style.display = 'none'
+			// 			document.querySelector('.about').style.display = 'none'
 			// 		}else {
 			// 			document.querySelector('.historyinfo').style.display = 'none'
-			// 			document.querySelector('.concat').style.display = 'block'
+			// 			document.querySelector('.about').style.display = 'block'
 			// 		}
 			// 	}
 			// })
@@ -147,10 +141,10 @@
 			// 		}
 			// 		if(index == 1 || index == 2) {
 			// 			document.querySelector('.historyinfo').style.display = 'block'
-			// 			document.querySelector('.concat').style.display = 'none'
+			// 			document.querySelector('.about').style.display = 'none'
 			// 		}else {
 			// 			document.querySelector('.historyinfo').style.display = 'none'
-			// 			document.querySelector('.concat').style.display = 'block'
+			// 			document.querySelector('.about').style.display = 'block'
 			// 		}
 			// 	}
 			// })
@@ -193,14 +187,11 @@
 	</style>
 	<body>
 		<!-- PC首页轮播图 -->
-		<div class="homecontent" style="display: block;">
+		<div class="homecontent" style="display: none;">
 			<div class="gallery gallery--images js-flickity" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
-			  	<div style="background: url('resource/homebg.png');background-size: 100% 100%;position: absolute;left: 0%;width:100%;height:100vh"></div>
-			  	<div style="background: url('resource/image/banner2.jpg');background-size: 100% 100%;width:100%;height: 100vh;"></div>
-			  	<div style="background: url('resource/image/banner3.jpg');background-size: 100% 100%;width:100%;height: 100vh;"></div>
-			    <!-- <img src="resource/homebg.png" />
-			    <img src="resource/image/banner3.jpg" />
-			    <img src="resource/image/banner3.jpg" /> -->
+			  	<div style="background: url('resource/homebg.png');background-size: 100% 100%;position: absolute;left: 0%;"></div>
+			  	<div style="background: url('resource/image/banner2.jpg');background-size: 100% 100%;"></div>
+			  	<div style="background: url('resource/image/banner3.jpg');background-size: 100% 100%;"></div>
 			</div>
 			<!-- PC首页导航栏 -->
 			<ul class="nav">
@@ -225,16 +216,26 @@
 					<span>customer@selz1871.com</span>
 				</div>
 			</div>
+			<footer class="homeFooter">
+				111ffsdfsdfds
+			</footer>
+			<script>
+				var  imgWidth = $('.homecontent .gallery div').height(),bodyWidth = $(document.body).height(),footerHeight = bodyWidth - imgWidth;
+				if (footerHeight > 100) {
+					$('.homeFooter').css('height',footerHeight).css('line-height',footerHeight+'px');
+				}
+
+			</script>
 		</div>
 		<!-- 手机导航栏 -->
-		<div class="mobilenav">
+		<div class="mobilenav mb">
 			<img class="img1" width="45" height="32" src="./resource/image/mobile/nav/menu.png">
-			<img class="img2" width="35" height="38" src="./resource/image/mobile/nav/share.png">
+			<!-- <img class="img2" width="35" height="38" src="./resource/image/mobile/nav/share.png"> -->
 			<img class="img3" width="57" height="49" src="./resource/image/mobile/nav/logo.png">
-			<img class="img4" width="39" height="39" src="./resource/image/mobile/nav/search.png">
+			<!-- <img class="img4" width="39" height="39" src="./resource/image/mobile/nav/search.png"> -->
 		</div>
 		<!-- 手机隐藏列表 -->
-		<div class="sidebar">
+		<div class="sidebar mb">
 			<img class='barlogo' width="166" height="47" src="./resource/image/mobile/sidebar/logo.png" alt="">
 			<ul class="barnav">
 				<li><a class="selected" href="#">HOME</a></li>
@@ -248,12 +249,12 @@
 		</div>
 		<!-- 除首页外PC公共头部 -->
 		<div class="header" style="display: block;">
-				<div class="gallery gallery--images js-flickity" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
-				  	<div style="background: url('resource/image/banner.png');background-size: 100% 100%;position: absolute;left: 0%;width:100%;height:100vh"></div>
-				  	<div style="background: url('resource/image/mobile/1.jpg');background-size: 100% 100%;width:100%;height: 100vh;"></div>
-				  	<div style="background: url('resource/image/mobile/2.jpg');background-size: 100% 100%;width:100%;height: 100vh;"></div>
+				<div class="gallery gallery--images js-flickity mb" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
+				  	<div style="background: url('resource/image/banner.png');background-size: 100% 100%;position: absolute;left: 0%;"></div>
+				  	<div style="background: url('resource/image/mobile/1.jpg');background-size: 100% 100%;"></div>
+				  	<div style="background: url('resource/image/mobile/2.jpg');background-size: 100% 100%;"></div>
 				</div>
-				<ul class="nav">
+				<ul class="nav pt pc">
 				<img src="resource/homelogo.png" alt="" class="homelogo" />
 				<li><a class="selected" href="#">HOME</a></li>
 				<li><a href="#">HISTORY</a></li>
@@ -266,7 +267,7 @@
 		</div>
 		<!-- 品牌历史区域 -->
 		<div class="content" style="display: block;">
-			<div class="historyinfo" id="history" style="display: block;">
+			<div class="historyinfo pt" id="history" >
 				<div class="infoheader">
 					<p class="title">品牌历史</p>
 					<p class="middle">
@@ -275,7 +276,7 @@
 					<p class="assist">“MAKE YOUR FEET GLAD”</p>
 				</div>
 				<div class="infohtml" >
-					<img class="historyimg" src="resource/image/history/img9.png"  alt="">
+					<img class="historyimg mb" src="resource/image/history/img9.png"  alt="">
 					<br>
 					<p style="text-indent:2em">SELZ創立於1871年美國芝加哥。148年以來，SELZ堅持以“MAKE YOUR FEET GLAD（解放雙足）”為品牌願景，始終專註舒適鞋履的研發，並把舒適概念延展到出行生活等周邊產品，通過不斷提升品質致力於讓消費者以便宜的價格買到功能優良、穿著舒適的產品，傳遞出“自然、健康、歡樂”的輕運動生活態度。
 					</p>
@@ -290,7 +291,7 @@
 						<li>2020年，重啟品牌，攜帶全新形象，登陸中國</li>
 					</ul>
 				</div>
-				<div class="imgnav">
+				<div class="imgnav wt">
 					<div class="item">
 						<img src="resource/image/history/img1.png" width="254" height="304" alt="">
 						<span>1871年</span>
@@ -326,68 +327,94 @@
 				</div>
 			</div>		
 			<!-- 关于我们内容 -->
-			<div class="concat">
-				<div class="info" id="about">
+			<div class="about pt"style="display: none;">
+				<div class="info pt" id="about">
 					<div class="infoheader">
 						<p class="title">关于我们</p>
 						<p class="middle">
 							<span>SELZ</span> | CONTACT US <span class="mark"></span><span class="line"></span>
 						</p>
 					</div>
-					<div class="imgnav">
+					<div class="imgnav wt">
 						<div class="item">
 							<div class="itemcontent">
-								<img src="resource/image/contact/img1.png" width="304" height="213" alt="">
+								<img src="resource/image/about/img1.png" width="304" height="213" alt="">
 								<p>HOW IS THE SELZ?</p>
 								<span>SELZ创立于1871年， 是当时美国芝加哥最领先的鞋履品牌之一，距今已有148年的品牌历史。 在1918年，品牌开始在美国体育运动领域有着卓越的成就， 尤其是在棒球领域受到广大的欢迎与喜爱。 </span>
 							</div>
-							<a href="###">Read More...</a>
+							<!-- <a href="###">Read More...</a> -->
 						</div>
 						<div class="item">
 							<div class="itemcontent">
-								<img src="resource/image/contact/img2.png" width="304" height="213" alt="">
+								<img src="resource/image/about/img2.jpg" width="304" height="213" alt="">
 								<p>MAKE YOUR FEET GLAD</p>
 								<span>从品牌建立初始，一直秉承着品牌标语：“MAKE YOUR FEET GLAD”（解放双足）的概念， 并将这个品牌理念延续了一百多年，是品牌最核心的价值。 </span>
 							</div>
-							<a href="###">Read More...</a>
+							<!-- <a href="###">Read More...</a> -->
 						</div>
 						<div class="item">
 							<div class="itemcontent">
-								<img src="resource/image/contact/img3.png" width="304" height="213" alt="">
-								<p>HOW IS THE SELZ?</p>
+								<img src="resource/image/about/img3.jpg" width="304" height="213" alt="">
+								<p>HOW IS THE SELZ?</p>-
 								<span>SELZ认为在快节奏的生活压力下，拥有积极乐观的生活态度是非常必要的。 放慢生活节奏，拥抱无限自由，去感受“轻生活”的真谛与美好。 从身体的释放到心灵的释放，是对自然生活状态的追求，也是体验趣味生活的开始。</span>
 							</div>
-							<a href="###">Read More...</a>
+							<!-- <a href="###">Read More...</a> -->
 						</div>
 					</div>
 				</div>
-				<div class="contactinfo">
-					<p class="title">Contact US</p>
-					<p>SELZ 中国</p>
-					<br>
-					<p>WeChat Account: SELZ赛尔兹</p>
-					<p>微信号：SELZ赛尔兹</p>
-					<br>
-					<p>WeChat Official Account 官方微信公众号：</p>
-					<p>SELZ赛尔兹</p>
-					<br>
-					<p>Weibo Official Account 官方微博：</p>
-					<p>SELZ赛尔兹</p>
-					<br>
-					<p>Business Cooperation 商务合作：</p>
-					<p>Telephone：020-33694148</p>
-					<p>Email：bd@selz1871.com</p>
-					<br>
-					<p>Customer Service 售后服务：</p>
-					<p>Service Number: +86-020-33694148</p>
-					<p>Service Time: 09:00-18:00</p>
-					<p>Email: customer@selz1871.com</p>
+			</div>
+				<!-- 联系我们内容 -->
+			<div class="contact pt" >
+				<div class="info pt" id="contact">
+					<div class="infoheader">
+						<p class="title">联系我们</p>
+						<p class="middle">
+							<span>SELZ</span> | CONTACT <span class="mark"></span><span class="line"></span>
+						</p>
+					</div>
+					<div class="imgnav wt">
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img1.png" alt="">
+								<p>Contact US</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img2.png" alt="">
+								<p>Business Cooperation</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img3.png" alt="">
+								<p>Customer Service</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img4.png" alt="">
+								<p>WeChat Account</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img5.png" alt="">
+								<p>WeChat Official Account</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemcontent">
+								<img src="resource/image/contact/img6.png" alt="">
+								<p>Weibo Official Account</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- 手机底部 -->
-		<div class="mobilefooter">
+		<div class="mobilefooter mb">
 			<img class="logo" width="64" height="55" src="./resource/image/mobile/nav/logo.png">
 			<div class="footerinfo">
 				<div class="addressinfo">
@@ -404,7 +431,7 @@
 						<span>customer@selz1871.com</span>
 					</div>
 				</div>
-				<div class="concatinfo">
+				<div class="aboutinfo">
 					<img width="14" height="14" src="resource/image/mobile/footer/facebook.png">
 					<img width="15" height="13" src="resource/image/mobile/footer/twitter.png">
 					<img width="15" height="15" src="resource/image/mobile/footer/instagram.png">
@@ -415,18 +442,16 @@
 					<span>©赛尔兹SELZ（中国）版权所有</span>
 				</div>
 			</div>
-		</div>
+		</div> 
 		<!-- PC底部 -->
 		<div class="footer" style="display: block;">
 			<p>http://www.selz1871.com&nbsp;&nbsp;&nbsp;&nbsp;Copyright @SELZ. All Right Reserved.</p>
 			<p>©赛尔兹SELZ（中国）版权所有</p>
 		</div>
-		<!-- 遮挡层 -->
-		<div class="mask"></div>
-		<!-- 手机端搜索框 -->
-		<div class="searchview">
-			<input type="text" />
-			<img width="30" height="30" src="resource/image/mobile/nav/searchicon.png">
-		</div>
+		<!-- <div class="mask"></div> -->
+		<!-- <div class="searchview"> -->
+			<!-- <input type="text" /> -->
+			<!-- <img width="30" height="30" src="resource/image/mobile/nav/searchicon.png"> -->
+		<!-- </div> -->
 	</body>
 </html>
