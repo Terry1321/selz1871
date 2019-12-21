@@ -8,6 +8,8 @@
 }
 
 .historyinfo .imgnav .item {
+	width: 21%;
+	margin-right: 3.5%;
 	display: inline-block;
 	text-align: center;
 	margin-left: 0px;
@@ -47,10 +49,7 @@
 	width: 100%;
 	height: auto;
 }
-.historyinfo .imgnav .item{
-	width: 21%;
-	margin-right: 4%;
-}
+
 .historyinfo .imgnav .item span{
 	width: 100%;
 	font-size: 0.83vw;
@@ -64,7 +63,7 @@
 
 
 
-@media screen and (min-width: 769px) and (max-width: 993px){
+/*@media screen and (min-width: 769px) and (max-width: 993px){
 	.historyinfo .infohtml{
 		width: 490px;
 	}
@@ -72,11 +71,11 @@
 		width: 90%;
 	}
 }
-
+*/
 /**
  *像素小于1000
 **/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 	.historyinfo .imgnav{
 		margin-top: 125px;
 		width: 100%;
