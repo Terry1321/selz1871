@@ -156,6 +156,11 @@
     margin-bottom: 0 !important;
 }
 
+@media only screen and (max-width: 1400px){
+  .homeF{
+    height: 480px !important;
+  }
+}
 @media only screen and (max-width: 993px){
   .homeFooter .footerinfo{
     margin:  20px 0;

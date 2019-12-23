@@ -20,11 +20,15 @@
 	width: 100%;
 }
 .itemcontent p{
-	font-family: "english";
+	font-family: "aboutTtile";
 	margin: 20px 0;
 }
+
 .itemcontent span{
-	font-family: "chinese";
+	letter-spacing: 1px;
+    line-height: 30px;
+	font-family: Arial,微软雅黑,黑体;
+	font-size: 11pt;
 }
 
 /*@media screen and (min-width: 1201px) and (max-width: 1400px) {
@@ -64,8 +68,14 @@
  *像素小于1000
 **/
 @media only screen and (max-width: 768px) {
+	.about .imgnav .item:first-child{
+		margin-top: 0;
+	}
+	.about .imgnav{
+		margin-top:90px;
+	}
 	.itemcontent p{
-		margin: 20px 0;
+		margin: 30px 0;
 		font-size: 22px;
 	}
 	.info {
@@ -78,7 +88,7 @@
 		margin-top: 2px;
 		display: inline-block;
 		border-bottom: 1px solid #3e3a39;
-		width: 60%;
+		width: 55%;
 		margin-left: 7px;
 		vertical-align: middle;
 	}
@@ -99,7 +109,7 @@
 		margin-bottom: 0;
 	}
 	.about .imgnav .item{
-		margin-top: 30px;
+		margin-top: 100px;
 		width: 100%;
 	}
 	.about .imgnav .item:nth-child(3){
@@ -107,6 +117,12 @@
 	}
 }
 @media only screen and (max-device-width: 768px) {
+	.about .imgnav .item:first-child{
+		margin-top: 0;
+	}
+	.about .imgnav{
+		margin-top:90px;
+	}
 	.itemcontent p{
 		margin: 20px 0;
 		font-size: 22px;
@@ -121,7 +137,7 @@
 		margin-top: 2px;
 		display: inline-block;
 		border-bottom: 1px solid #3e3a39;
-		width: 60%;
+		width: 55%;
 		margin-left: 7px;
 		vertical-align: middle;
 	}
@@ -137,12 +153,11 @@
 		margin-top: 16px;
 	}
 	.about .imgnav{
-		margin-top: 105px;
 		width: 100%;
 		margin-bottom: 0;
 	}
 	.about .imgnav .item{
-		margin-top: 30px;
+		margin-top: 100px;
 		width: 100%;
 	}
 	.about .imgnav .item:nth-child(3){

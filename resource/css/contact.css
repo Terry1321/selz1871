@@ -24,7 +24,7 @@
 	padding: 7px 0;
 	font-size: 13.55px;
 	color: #666666;
-	font-family: "chinese";
+	font-family: Arial,微软雅黑,黑体;
 }
 .contact .imgnav .item  .title{
 	padding: 0;
@@ -32,6 +32,7 @@
 	margin: 19px 0 19px 0;
 	width: 100%;
 	font-size: 28.58px;
+	font-family: "contactTitle";
 }
 
 .m0{
@@ -74,16 +75,16 @@
 		margin-bottom: 0;
 	}
 	.contact .imgnav .item img{
-		width: 43px;
-		height: 43px;
+		width: 70px;
+		height: 70px;
 	}
 	.contact .imgnav .item p{
 		width: 100%;
 		margin: 0;
 		padding: 4px 0;
-		font-size: 7.6px;
 		color: #666666;
-		font-family: "chinese";
+		font-size: 12.6px;
+		font-family: Arial,微软雅黑,黑体;
 	}
 	.contact .imgnav .item p:last-child{
 		margin-bottom: 42PX;
@@ -93,9 +94,11 @@
 		color: #000;
 		margin: 12px 0 12px 0;
 		width: 100%;
-		font-size: 16px;
+		font-size: 25.82px;
 	}
-
+	.contact .infoheader .middle .line {
+		    width: 60%;
+		}
 }
 @media only screen and (max-device-width: 768px) {
 	.contact .imgnav .item{
@@ -109,16 +112,15 @@
 		margin-bottom: 0;
 	}
 	.contact .imgnav .item img{
-		width: 43px;
-		height: 43px;
+		width: 70px;
+		height: 70px;
 	}
 	.contact .imgnav .item p{
 		width: 100%;
 		margin: 0;
 		padding: 4px 0;
-		font-size: 7.6px;
+		font-size: 12.6px;
 		color: #666666;
-		font-family: "chinese";
 	}
 	.contact .imgnav .item p:last-child{
 		margin-bottom: 42PX;
@@ -128,6 +130,9 @@
 		color: #000;
 		margin: 12px 0 12px 0;
 		width: 100%;
-		font-size: 16px;
+		font-size: 25.82px;
+	}
+	.contact .infoheader .middle .line {
+	    width: 60%;
 	}
 }

@@ -140,7 +140,14 @@ q:after {
   font-family: "english";
   src: url(./../MYRIADPRO-BOLD.OTF) format("truetype");
 }
-
+@font-face {
+  font-family: "contactTitle";
+  src: url(./../FZDHTK.TTF) format("truetype");
+}
+@font-face {
+  font-family: "aboutTtile";
+  src: url(./../YesevaOne-Regular.ttf) format("truetype");
+}
 
 /***********************************************************公共参数***********************************************************/
 .wt{
@@ -308,44 +315,6 @@ q:after {
 .mobilenav {
 	/*display: none;*/
 }
-.footer {
-	float: left;
-	width: 100%;
-	margin-top: 196px;
-	font-size: 12.5px;
-}
-
-/*
-  ***********************************************************PC底部 **********************************************************
-*/
-.footer p {
-	margin-top: 10px
-}
-
-.footer p:first-child {
-	margin-top: 19px;
-}
-.footer {
-	float: left;
-	width: 100%;
-	margin-top: 196px;
-	font-size: 12.5px;
-}
-
-.footer p {
-	margin-top: 10px
-}
-
-.footer p:first-child {
-	margin-top: 19px;
-}
-.footer {
-	color: #fff;
-	background: black;
-	text-align: center;
-	height: 100px;
-}
-
 
 /*
   ***********************************************************小于1220像素 **********************************************************
@@ -709,6 +678,7 @@ q:after {
 }
 
 .infoheader .assist {
+	letter-spacing:5px;
 	font-size: 10px;
 }
  .title{
