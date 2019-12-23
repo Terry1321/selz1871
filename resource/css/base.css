@@ -519,11 +519,156 @@ q:after {
 	.addressinfo .item span {
 		vertical-align: text-top;
 	}
-	
-
 }
 
+@media only screen and (max-device-width: 768px) {
+	/*******************公共参数*********************************/
+	.pc{display: none!important;}
+	.mb{display: block!important;}
+	.homecontent,.homeFooter {
+		display: none!important;
+	}
+	.header, .content ,.about,.contact{
+		display: block!important;
+	}
+	/**************************轮播图 ***********************/
+	.header {
+		height: 155vw;
+		background:  none;
+	}
+	.header .gallery div {
+		width: 100%;
+		height: 155vw;
+	}
+	/* *************************手机导航 **********************/
+	.mobilenav {
+		/*display: block;*/
+		z-index: 9;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+	}
+	.nav {
+		/*display: none;*/
+	}
+	/* ****************手机导航列表 ***************/
+	.sidebar {
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		width: 42%;
+		height: auto;
+		background: rgba(0, 0, 0, 0.5);
+		left: -600px;
+		position: fixed;
+		z-index: 99;
+	}
+	.sidebar .closebtn {
+		background: rgba(0, 0, 0, 0.5);
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		right: -60px;
+		top: 0;
+	}
+	.closebtn img {
+		padding: 13px;
+	}
+	.sidebar .barlogo {
+		padding: 8.3vw;
+		height: auto;
+		width: 18vw;
+	}
+	.barnav {
+		color: #FFFFFF;
+		font-size: 30px;
+		font-weight: 900;
+	}
+	.barnav li {
+		margin-bottom: 9.5vw;
+	}
+	.barnav a {
+		font-size: 4vw;
+		color: #fff;
+		text-decoration: none;
+		padding: 8.3vw 0 0 8.3vw;
+		font-family: 'Kimberley';
+	}
+	.barnav a.selected {
+		color: #005B9F;
+	}
+	.sidebar {
+		/*display: block;*/
+	}
+	/* ***************************************手机底部 ****************************************/
+	.mobilefooter {
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+		height: 108px;
+		margin-top: 196px;
+		padding:  0 0 27px 33px ;
+		font-size: 12.5px;
+		color: #fff;
+		background: black;
+	}
+	.aboutinfo span {
+		float: left;
+	    display: inline-block;
+	    margin-right: 10px;
+	    margin-top: 15px;
+	}
+	.aboutinfo img {
+		margin-right: 13px;
+	    margin-top: 15px;
+	}
+	.aboutinfo{
+		margin-top: 30px;
+		width: 100%;
+	}
 
+	.icon-group{
+		display: inline-block;
+		float: right;
+	}
+	.mobilefooter .logo {
+		    padding-top: 33px;
+		    margin-right: 17px;
+	}
+
+	.mobilefooter .footerinfo {		    
+		font-size: 12px;
+		width: 100%;
+		display: inline-block;
+	}
+	.addressinfo .item {
+		display: inline-block;
+		font-size: 12px;
+		margin-right: 8px;
+		margin-top: 10px;
+	}
+
+	.addressinfo img {
+		margin-right: 3px;
+		height: 15px;
+	}
+
+	.addressinfo .item img.address {
+		width: 9px;
+	}
+
+	.addressinfo .item img.phone {
+		width: 7px;
+	}
+
+	.addressinfo .item img.email {
+		width: 17px;
+	}
+
+	.addressinfo .item span {
+		vertical-align: text-top;
+	}
+}
 /*******子页面的标题样式************/
 .infoheader {
 	color: #000000;

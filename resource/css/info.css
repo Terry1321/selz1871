@@ -64,6 +64,10 @@
  *像素小于1000
 **/
 @media only screen and (max-width: 768px) {
+	.itemcontent p{
+		margin: 20px 0;
+		font-size: 22px;
+	}
 	.info {
 		box-sizing: border-box;
 		padding: 0px 8%;
@@ -84,7 +88,6 @@
 	}
 
 	.info .imgnav .item span {
-		font-size: 0.83vw;
 		line-height: 30px;
 		display: block;
 		color: black;
@@ -96,14 +99,18 @@
 		margin-bottom: 0;
 	}
 	.about .imgnav .item{
-		width: 30%;
-		margin-right: 4%
+		margin-top: 30px;
+		width: 100%;
 	}
 	.about .imgnav .item:nth-child(3){
 		margin-right: 0;
 	}
 }
 @media only screen and (max-device-width: 768px) {
+	.itemcontent p{
+		margin: 20px 0;
+		font-size: 22px;
+	}
 	.info {
 		box-sizing: border-box;
 		padding: 0px 8%;
@@ -124,7 +131,6 @@
 	}
 
 	.info .imgnav .item span {
-		font-size: 0.83vw;
 		line-height: 30px;
 		display: block;
 		color: black;
@@ -136,8 +142,8 @@
 		margin-bottom: 0;
 	}
 	.about .imgnav .item{
-		width: 30%;
-		margin-right: 4%
+		margin-top: 30px;
+		width: 100%;
 	}
 	.about .imgnav .item:nth-child(3){
 		margin-right: 0;
