@@ -5,9 +5,10 @@
 .about .imgnav {
 	margin-top: 9%;
 	width: 100%;
+	margin-bottom: 196px;
 }
 .about .imgnav .item{
-	float: left;
+	display: inline-table;
 	width: 27%;	
 	margin-right:3.5%;
 }
@@ -62,7 +63,7 @@
 /**
  *像素小于1000
 **/
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
 	.info {
 		box-sizing: border-box;
 		padding: 0px 8%;
@@ -92,6 +93,47 @@
 	.about .imgnav{
 		margin-top: 105px;
 		width: 100%;
+		margin-bottom: 0;
+	}
+	.about .imgnav .item{
+		width: 30%;
+		margin-right: 4%
+	}
+	.about .imgnav .item:nth-child(3){
+		margin-right: 0;
+	}
+}
+@media only screen and (max-device-width: 768px) {
+	.info {
+		box-sizing: border-box;
+		padding: 0px 8%;
+		width: 100%;
+	}
+
+	.infoheader .middle .line {
+		margin-top: 2px;
+		display: inline-block;
+		border-bottom: 1px solid #3e3a39;
+		width: 60%;
+		margin-left: 7px;
+		vertical-align: middle;
+	}
+
+	.info .item img {
+		width: 100%;
+	}
+
+	.info .imgnav .item span {
+		font-size: 0.83vw;
+		line-height: 30px;
+		display: block;
+		color: black;
+		margin-top: 16px;
+	}
+	.about .imgnav{
+		margin-top: 105px;
+		width: 100%;
+		margin-bottom: 0;
 	}
 	.about .imgnav .item{
 		width: 30%;

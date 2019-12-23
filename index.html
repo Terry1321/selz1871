@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<head>
+		<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
 		<title>赛尔兹-Selz.com（中国）-赛尔兹（Selz</title>
 		<link rel="stylesheet" type="text/css" href="resource/css/base.css" />
 		<link rel="stylesheet" type="text/css" href="resource/css/index.css" />
@@ -15,7 +15,7 @@
 		<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
 	</head>
 	<script>
-		// var curentPage = 'Home'
+		// // var curentPage = 'Home'
 		window.addEventListener('resize', function() {
 			if (window.outerWidth < 350) {
 				document.querySelector('[name="viewport"]').content = "width=device-width, user-scalable=no, initial-scale=0.4"
@@ -90,12 +90,12 @@
 						document.querySelector('.homecontent').style.display = 'block'
 						document.querySelector('.header').style.display = 'none'
 						document.querySelector('.content').style.display = 'none'
-						document.querySelector('.footer').style.display = 'none'
+						// document.querySelector('.footer').style.display = 'none'
 						return;
 					}
 						document.querySelector('.content').style.display = 'block'
 						document.querySelector('.homecontent').style.display = 'none'
-						document.querySelector('.footer').style.display = 'block'
+						// document.querySelector('.footer').style.display = 'block'
 						document.querySelector('.header').style.display = 'block'
 					if(index == 1) {
 						document.querySelector('.historyinfo').style.display = 'block'
@@ -128,7 +128,7 @@
 						document.querySelector('.homecontent').style.display = 'block'
 						document.querySelector('.header').style.display = 'none'
 						document.querySelector('.content').style.display = 'none'
-						document.querySelector('.footer').style.display = 'none'
+						// document.querySelector('.footer').style.display = 'none'
 					}
 					if(index == 1) {
 						document.querySelector('.historyinfo').style.display = 'block'
@@ -205,11 +205,13 @@
 	<body>
 		<!-- PC首页轮播图 -->
 		<div class="homecontent">
-			<div class="gallery gallery--images js-flickity" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
-			  	<div style="background: url('resource/homebg.png');background-size: 100% 100%;position: absolute;left: 0%;"></div>
-			  	<div style="background: url('resource/image/banner2.jpg');background-size: 100% 100%;"></div>
-			  	<div style="background: url('resource/image/banner3.jpg');background-size: 100% 100%;"></div>
-			</div>
+			<section>
+				<div class="gallery gallery--images js-flickity" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
+				  	<div style="background: url('resource/homebg.png');background-size: 100% 100%;position: absolute;left: 0%;"></div>
+				  	<div style="background: url('resource/image/banner2.jpg');background-size: 100% 100%;"></div>
+				  	<div style="background: url('resource/image/banner3.jpg');background-size: 100% 100%;"></div>
+				</div>
+			</section>
 			<!-- PC首页导航栏 -->
 			<ul class="nav">
 				<img src="resource/homelogo.png" alt="" class="homelogo" />
@@ -233,44 +235,38 @@
 					<span>customer@selz1871.com</span>
 				</div>
 			</div>
-			  <footer class="homeFooter"> 
-			   <img class="logo" width="138" height="128" src="./resource/image/mobile/nav/logo.png" /> 
-			   <div class="footerinfo"> 
-			    <div class="addressinfo"> 
-			     <div class="item"> 
-			      <img class="address" src="resource/image/mobile/footer/address.png" /> 
-			      <span>Guangzhou City, CHINA</span> 
-			     </div> 
-			     <div class="item"> 
-			      <img class="phone" src="resource/image/mobile/footer/phone.png" /> 
-			      <span>(+86) 020-33694148</span> 
-			     </div> 
-			     <div class="item"> 
-			      <img class="email" src="resource/image/mobile/footer/email.png" /> 
-			      <span style="top: -8px;">customer@selz1871.com</span> 
-			     </div> 
-			     <div class="icongroup"> 
-			      <img width="24" height="24" src="resource/image/mobile/footer/facebook.png" /> 
-			      <img width="25" height="23" src="resource/image/mobile/footer/twitter.png" /> 
-			      <img width="25" height="25" src="resource/image/mobile/footer/instagram.png" /> 
-			      <img width="26" height="26" src="resource/image/mobile/footer/google.png" /> 
-			      <img width="36" height="26" src="resource/image/mobile/footer/wechat.png" /> 
-			      <img width="28" height="26" src="resource/image/mobile/footer/weibo.png" /> 
-			     </div> 
-			    </div> 
-			    <div class="copyrightinfo">
-			    	<span>Copyright @SELZ. All Right Reserved.</span>
-					<span>©赛尔兹SELZ（中国）版权所有</span>
-			    </div>
-			   </div> 
-			  </footer>
-			<script>
-				var  imgWidth = $('.homecontent .gallery div').height(),bodyWidth = $(document.body).height(),footerHeight = bodyWidth - imgWidth;
-				if (footerHeight > 100) {
-					$('.homeFooter').css('height',footerHeight).css('line-height',footerHeight+'px');
-				}
-
-			</script>
+			  <!--<footer class="homeFooter"> -->
+			  <!-- <img class="logo" width="50" height="50" src="./resource/image/mobile/nav/logo.png" /> -->
+			  <!-- <div class="footerinfo"> -->
+			  <!--  <div class="addressinfo"> -->
+			  <!--   <div class="item"> -->
+			  <!--    <img class="address"  src="resource/image/mobile/footer/address.png" /> -->
+			  <!--    <span>Guangzhou City, CHINA</span> -->
+			  <!--   </div> -->
+			  <!--   <div class="item"> -->
+			  <!--    <img class="phone" src="resource/image/mobile/footer/phone.png" /> -->
+			  <!--    <span>(+86) 020-33694148</span> -->
+			  <!--   </div> -->
+			  <!--   <div class="item"> -->
+			  <!--    <img class="email" src="resource/image/mobile/footer/email.png" /> -->
+			  <!--    <span >customer@selz1871.com</span> -->
+			  <!--   </div> -->
+			  <!--   <div class="icongroup"> -->
+			  <!--    <img width="18" height="17" src="resource/image/mobile/footer/facebook.png" /> -->
+			  <!--    <img width="20" height="17" src="resource/image/mobile/footer/twitter.png" /> -->
+			  <!--    <img width="20" height="20" src="resource/image/mobile/footer/instagram.png" /> -->
+			  <!--    <img width="21" height="21" src="resource/image/mobile/footer/google.png" /> -->
+			  <!--    <img width="21" height="21" src="resource/image/mobile/footer/wechat.png" /> -->
+			  <!--    <img width="25" height="20" src="resource/image/mobile/footer/weibo.png" /> -->
+			  <!--   </div> -->
+			  <!--  </div> -->
+			  <!--  <div class="copyrightinfo">-->
+			  <!--  	<span>Copyright @SELZ. All Right Reserved.</span>-->
+					<!--<span>©赛尔兹SELZ（中国）版权所有</span>-->
+			  <!--  </div>-->
+			  <!-- </div> -->
+			  <!--</footer>-->
+		
 		</div>
 		<!-- 手机导航栏 -->
 		<div class="mobilenav mb">
@@ -294,7 +290,7 @@
 		</div>
 		<!-- 除首页外PC公共头部 -->
 		<div class="header" >
-				<div class="gallery gallery--images js-flickity mb" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false }'>
+				<div class="gallery gallery--images js-flickity mb" data-flickity-options='{"initialIndex": 0,"imagesLoaded": true,"wrapAround": true , "autoPlay": 3500, "pauseAutoPlayOnHover": false ,"draggable":false}'>
 				  	<div style="background: url('resource/image/banner.png');background-size: 100% 100%;position: absolute;left: 0%;"></div>
 				  	<div style="background: url('resource/image/mobile/1.jpg');background-size: 100% 100%;"></div>
 				  	<div style="background: url('resource/image/mobile/2.jpg');background-size: 100% 100%;"></div>
@@ -326,31 +322,31 @@
 					<p style="text-indent:2em">SELZ創立於1871年美國芝加哥。148年以來，SELZ堅持以“MAKE YOUR FEET GLAD（解放雙足）”為品牌願景，始終專註舒適鞋履的研發，並把舒適概念延展到出行生活等周邊產品，通過不斷提升品質致力於讓消費者以便宜的價格買到功能優良、穿著舒適的產品，傳遞出“自然、健康、歡樂”的輕運動生活態度。
 					</p>
 					<ul>
-						<li>1871年，Morris Selz在美國芝加哥成立SELZ皮鞋公司；</li>
-						<li>1918年，美國著名棒球手Joe Jackson代言SELZ品牌； </li>
-						<li>1953年，Jim Peters穿著SELZ跑鞋在Polytechnic馬拉松賽上創造了新的世界紀錄；</li>
-						<li>1972年，SELZ成为波士顿马拉松的跑鞋供应商之一，合作选手包括著名的首位女性马拉松选手Kathrine Virginia； </li>
-						<li>1989年，成為世界高塔競速協會的首批贊助商之一; </li>
+						<li>1871年，SELZ品牌在美國芝加哥創立；</li>
+						<li>1910年，《紐約時報》評論SELZ為全美最舒適的鞋品牌之壹；</li>
+						<li>1919年，美國著名棒球手Joe Jackson代言SELZ品牌；</li> 
+						<li>1953年Jim Peters穿著SELZ跑鞋在Polytechnic馬拉松賽上創造了新的世界紀錄；</li>
+						<li>1972年，SELZ成為波士頓馬拉松的跑鞋供應商之壹，合作選手包括著名的首位女性馬拉松選手Kathrine Virginia；</li>
+						<li>1989年，成為世界高塔競速協會的首批贊助商之壹; </li>
 						<li>2008年，民主設計項目創立，邀請運動員和大學生共同參與鞋款設計; </li>
-						<li>2010年，SELZ公司的產品從運動鞋延伸至運動服裝、生活配件、電子產品、出行產品，在延續對舒適體驗的同時，亦開始關注全球的輕運動趨勢； </li>
-						<li>2020年，重啟品牌，攜帶全新形象，登陸中國</li>
+						<li>2012年，以輕運動生活方式品牌的概念向全球市場進發; </li>
 					</ul>
 				</div>
 				<div class="imgnav wt">
 					<div class="item">
-						<img src="resource/image/history/img1.png" width="254" height="304" alt="">
+						<img src="resource/image/history/img1.jpg" width="254" height="304" alt="">
 						<span>1871年</span>
 					</div>
 					<div class="item">
-						<img src="resource/image/history/img2.png" width="254" height="304" alt="">
+						<img src="resource/image/history/img2.jpg" width="254" height="304" alt="">
 						<span>1910年</span>
 					</div>
 					<div class="item">
-						<img src="resource/image/history/img3.png" width="254" height="304" alt="">
-						<span>1918年</span>
+						<img src="resource/image/history/img3.jpg" width="254" height="304" alt="">
+						<span>1919年</span>
 					</div>
 					<div class="item">
-						<img src="resource/image/history/img4.png" width="254" height="304" alt="">
+						<img src="resource/image/history/img4.jpg" width="254" height="304" alt="">
 						<span>1953年</span>
 					</div>
 					<div class="item">
@@ -362,12 +358,12 @@
 						<span>1989年</span>
 					</div>
 					<div class="item">
-						<img src="resource/image/history/img7.png" width="254" height="304" alt="">
+						<img src="resource/image/history/img7.jpg" width="254" height="304" alt="">
 						<span>2008年</span>
 					</div>
 					<div class="item">
-						<img src="resource/image/history/img8.png" width="254" height="304" alt="">
-						<span>2020年</span>
+						<img src="resource/image/history/img8.jpg" width="254" height="304" alt="">
+						<span>2012年</span>
 					</div>
 				</div>
 			</div>		
@@ -383,7 +379,7 @@
 					<div class="imgnav wt">
 						<div class="item">
 							<div class="itemcontent">
-								<img src="resource/image/about/img1.png" width="304" height="213" alt="">
+								<img src="resource/image/about/img1.jpg" width="304" height="213" alt="">
 								<p>HOW IS THE SELZ?</p>
 								<span>SELZ创立于1871年， 是当时美国芝加哥最领先的鞋履品牌之一，距今已有148年的品牌历史。 在1918年，品牌开始在美国体育运动领域有着卓越的成就， 尤其是在棒球领域受到广大的欢迎与喜爱。 </span>
 							</div>
@@ -472,9 +468,9 @@
 		</div>
 		<!-- 手机底部 -->
 		<div class="mobilefooter mb">
-			<img class="logo" width="64" height="55" src="./resource/image/mobile/nav/logo.png">
+			<!-- <img class="logo" width="64" height="55" src="./resource/image/mobile/nav/logo.png"> -->
 			<div class="footerinfo">
-				<div class="addressinfo">
+				<!-- <div class="addressinfo">
 					<div class="item">
 						<img class="address" src="resource/image/mobile/footer/address.png">
 						<span>Guangzhou City, CHINA</span>
@@ -490,24 +486,64 @@
 					<div class="item">
 						<span>www.selz1871.com</span>
 					</div>
-				</div>
+				</div> -->
 				<div class="aboutinfo">
-					<img width="14" height="14" src="resource/image/mobile/footer/facebook.png">
-					<img width="15" height="13" src="resource/image/mobile/footer/twitter.png">
-					<img width="15" height="15" src="resource/image/mobile/footer/instagram.png">
-					<img width="16" height="16" src="resource/image/mobile/footer/google.png">
-					<img width="16" height="16" src="resource/image/mobile/footer/wechat.png">
-					<img width="18" height="16" src="resource/image/mobile/footer/weibo.png">
+					<div class="icon-group">
+						<img width="15" height="15" src="resource/image/mobile/footer/instagram.png">
+						<img width="16" height="16" src="resource/image/mobile/footer/google.png">
+						<img width="16" height="16" src="resource/image/mobile/footer/wechat.png">
+						<img width="18" height="16" src="resource/image/mobile/footer/weibo.png">
+						<img width="14" height="14" src="resource/image/mobile/footer/facebook.png">
+						<img width="15" height="13" src="resource/image/mobile/footer/twitter.png">
+					</div>
 					<span>Copyright @SELZ. All Right Reserved.</span>
 					<span>©赛尔兹SELZ（中国）版权所有</span>
 				</div>
 			</div>
 		</div> 
+				  <footer class="homeFooter"> 
+			   <img class="logo" width="50" height="50" src="./resource/image/mobile/nav/logo.png" /> 
+			   <div class="footerinfo"> 
+			    <div class="addressinfo"> 
+			     <div class="item"> 
+			      <img class="address"  src="resource/image/mobile/footer/address.png" /> 
+			      <span>Guangzhou City, CHINA</span> 
+			     </div> 
+			     <div class="item"> 
+			      <img class="phone" src="resource/image/mobile/footer/phone.png" /> 
+			      <span>(+86) 020-33694148</span> 
+			     </div> 
+			     <div class="item"> 
+			      <img class="email" src="resource/image/mobile/footer/email.png" /> 
+			      <span >customer@selz1871.com</span> 
+			     </div> 
+			     <div class="icongroup"> 
+			      <img width="18" height="17" src="resource/image/mobile/footer/facebook.png" /> 
+			      <img width="20" height="17" src="resource/image/mobile/footer/twitter.png" /> 
+			      <img width="20" height="20" src="resource/image/mobile/footer/instagram.png" /> 
+			      <img width="21" height="21" src="resource/image/mobile/footer/google.png" /> 
+			      <img width="21" height="21" src="resource/image/mobile/footer/wechat.png" /> 
+			      <img width="25" height="20" src="resource/image/mobile/footer/weibo.png" /> 
+			     </div> 
+			    </div> 
+			    <div class="copyrightinfo">
+			    	<span>Copyright @SELZ. All Right Reserved.</span>
+					<span>©赛尔兹SELZ（中国）版权所有</span>
+			    </div>
+			   </div> 
+			  </footer>
+			 <!--  	<script>
+				var  imgWidth = $('.homecontent .gallery div').height(),bodyWidth = $(document.body).height(),footerHeight = bodyWidth - imgWidth;
+				if (footerHeight > 100) {
+					$('.homeFooter').css('height',footerHeight).css('line-height',footerHeight+'px');
+				}
+
+			</script> -->
 		<!-- PC底部 -->
-		<div class="footer">
-			<p>http://www.selz1871.com&nbsp;&nbsp;&nbsp;&nbsp;Copyright @SELZ. All Right Reserved.</p>
-			<p>©赛尔兹SELZ（中国）版权所有</p>
-		</div>
+		<!--<div class="footer">-->
+		<!--	<p>http://www.selz1871.com&nbsp;&nbsp;&nbsp;&nbsp;Copyright @SELZ. All Right Reserved.</p>-->
+		<!--	<p>©赛尔兹SELZ（中国）版权所有</p>-->
+		<!--</div>-->
 		<!-- <div class="mask"></div> -->
 		<!-- <div class="searchview"> -->
 			<!-- <input type="text" /> -->

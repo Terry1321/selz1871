@@ -351,7 +351,7 @@ q:after {
   ***********************************************************小于1220像素 **********************************************************
 */
 
-@media screen and (max-width: 1200px)  and (min-width: 1201px){
+@media only screen and (max-width: 1200px){
 	.nav{
 		padding-left: 5%;
 	}
@@ -372,11 +372,11 @@ q:after {
 /*
   ***********************************************************小于768像素 **********************************************************
 */
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
 	/*******************公共参数*********************************/
 	.pc{display: none!important;}
 	.mb{display: block!important;}
-	.homecontent,.footer {
+	.homecontent,.homeFooter {
 		display: none!important;
 	}
 	.header, .content ,.about,.contact{
@@ -456,7 +456,7 @@ q:after {
 		float: left;
 		width: 100%;
 		box-sizing: border-box;
-		height: auto;
+		height: 108px;
 		margin-top: 196px;
 		padding:  0 0 27px 33px ;
 		font-size: 12.5px;
@@ -464,26 +464,33 @@ q:after {
 		background: black;
 	}
 	.aboutinfo span {
+		float: left;
 	    display: inline-block;
-	    margin-top: 15px;
 	    margin-right: 10px;
+	    margin-top: 15px;
 	}
 	.aboutinfo img {
-	    margin-top: 15px;
 		margin-right: 13px;
+	    margin-top: 15px;
 	}
-	/*.aboutinfo img:first-child{
-		margin-left: 26px;
-	}*/
+	.aboutinfo{
+		margin-top: 30px;
+		width: 100%;
+	}
+
+	.icon-group{
+		display: inline-block;
+		float: right;
+	}
 	.mobilefooter .logo {
 		    padding-top: 33px;
 		    margin-right: 17px;
 	}
 
-	.mobilefooter .footerinfo {
-		    /*width: calc(100% - 64px - 33px);*/
-		    font-size: 12px;
-		    display: inline-block;
+	.mobilefooter .footerinfo {		    
+		font-size: 12px;
+		width: 100%;
+		display: inline-block;
 	}
 	.addressinfo .item {
 		display: inline-block;
